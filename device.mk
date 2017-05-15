@@ -163,7 +163,8 @@ PRODUCT_PACKAGES += \
     telephony-ext \
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext
+    telephony-ext \
+    android.hidl.manager-V1.0-java
 
 # Vendor overlay
 PRODUCT_COPY_FILES += \
