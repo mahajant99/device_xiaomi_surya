@@ -82,6 +82,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/prebuilt/a618_gmu.bin:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/firmware/a618_gmu.bin
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0
+
 # Init
 PRODUCT_PACKAGES += \
     init.mi_thermald.rc \
