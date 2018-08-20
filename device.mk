@@ -127,6 +127,9 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
     FrameworksResCommon \
