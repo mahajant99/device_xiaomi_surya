@@ -23,6 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -44,6 +45,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
 
         // Doze
+        DiracUtils.initialize(context);
         DozeUtils.checkDozeService(context);
         // Force apply our default value for doze if it is not set.
         DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
