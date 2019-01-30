@@ -154,6 +154,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/dev/input/event3"
+
 # Treble
 BOARD_VNDK_VERSION := current
 
