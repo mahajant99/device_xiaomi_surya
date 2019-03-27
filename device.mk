@@ -88,7 +88,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     KarnaFrameworks \
-    NoCutoutOverlay
+    NoCutoutOverlay \
+    NotchBarKiller
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
