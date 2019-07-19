@@ -38,6 +38,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     vendor.display.disable_rotator_downscale=1 \
 
+# IOP properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.iop.enable_uxe=1 \
+    vendor.perf.iop_v3.enable=true
+
 # Smart fps switching
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.smart_dfps.enable=false
