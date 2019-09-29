@@ -96,5 +96,8 @@ void vendor_load_properties() {
             set_ro_product_prop(source, "model", "POCO X2");
         }
         property_override("ro.build.description", "phoenixin-user 10 QKQ1.190825.002 V11.0.6.0.QGHINXM release-keys");
+        property_override("ro.bluetooth.a2dp_offload.supported", "false");
+        property_override("persist.bluetooth.a2dp_offload.disabled", "true");
+        property_override("persist.bluetooth.bluetooth_audio_hal.disabled", "true");
     }
 }
