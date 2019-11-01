@@ -160,30 +160,6 @@
     -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 
-    <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
-         This mechanism allows the host to remain in suspend state and the dongle to actively
-         scan and wake the host when a configured SSID is detected by the dongle. This chipset
-         capability can provide power savings when wifi needs to be always kept on. -->
-    <bool name="config_wifi_background_scan_support">true</bool>
-
-    <!-- Wifi driver supports batched scan -->
-    <bool name="config_wifi_batched_scan_supported">true</bool>
-
-    <!-- Indicates that connected MAC randomization is supported on this device -->
-    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
-    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
-
-    <!-- Indicates that p2p MAC randomization is supported on this device -->
-    <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
-
-    <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
-    <bool name="config_wifi_softap_acs_supported">true</bool>
-
-    <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
-    <bool name="config_wifi_softap_ieee80211ac_supported">true</bool>
-
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
     <bool name="skip_restoring_network_selection">true</bool>
