@@ -66,6 +66,7 @@ int main() {
         goto shutdown;
     }
 
+    android::hardware::setMinSchedulerPolicy(service, SCHED_NORMAL, -20);
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     status = service->registerAsService();
