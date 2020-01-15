@@ -81,7 +81,7 @@ void vendor_load_properties() {
     if (region == "CN") {
         for (const auto &source : ro_props_default_source_order) {
             set_ro_build_prop(source, "fingerprint",
-                              "Redmi/phoenix/phoenix:10/QKQ1.190825.002/V11.0.9.0.QGHCNXM:user/release-keys");
+                               "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
             set_ro_product_prop(source, "brand", "Redmi");
             set_ro_product_prop(source, "device", "phoenix");
             set_ro_product_prop(source, "model", "Redmi K30");
@@ -90,7 +90,7 @@ void vendor_load_properties() {
     } else if (region == "INDIA") {
         for (const auto &source : ro_props_default_source_order) {
             set_ro_build_prop(source, "fingerprint",
-                              "POCO/phoenixin/phoenixin:10/QKQ1.190825.002/V11.0.6.0.QGHINXM:user/release-keys");
+                              "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
             set_ro_product_prop(source, "brand", "POCO");
             set_ro_product_prop(source, "device", "phoenixin");
             set_ro_product_prop(source, "model", "POCO X2");
