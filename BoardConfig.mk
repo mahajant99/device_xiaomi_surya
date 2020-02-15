@@ -7,7 +7,11 @@
 DEVICE_PATH := device/xiaomi/phoenix
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := phoenix
+TARGET_OTA_ASSERT_DEVICE := phoenix,phoenixin
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_phoenix
+TARGET_RECOVERY_DEVICE_MODULES := libinit_phoenix
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
