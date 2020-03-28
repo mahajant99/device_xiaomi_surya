@@ -102,8 +102,10 @@ void load_device_properties() {
 
     if (hwname == "surya") {
         set_device_props(fingerprint, description, "Poco", "surya", "M2007J20CG");
+        property_override("ro.product.mod_device", "surya_global");
     } else if (hwname == "karna") {
         set_device_props(fingerprint, description, "Poco", "karna", "M2007J20CI");
+        property_override("ro.product.mod_device", "surya_in_global");
     }
 }
 
