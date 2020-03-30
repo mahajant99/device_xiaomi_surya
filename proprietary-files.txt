@@ -26,7 +26,7 @@ product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
 
 # IMS
--product/priv-app/ims/ims.apk
+-product/priv-app/ims/ims.apk|600c6d03c03f88f35c51ba8e6b1a4cb7d70b94e6
 lib64/libdiag_system.so
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
@@ -53,6 +53,5 @@ product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
-# Telephony (qti-telephony-common)
-# Smali edited: Removed `miui.os.Build` dependency in `WifiManagerCompatible.isNeeded()`
-product/framework/qti-telephony-common.jar|d53c26a3df5ae5d3218caca05a89dcbaa9a1810f
+# Telephony (qti-telephony-common) - from LA.UM.8.9.r1-08400-SM6xx.0
+product/framework/qti-telephony-common.jar|411e1eda313b38205dd89a012d898f74e2ddaee0
