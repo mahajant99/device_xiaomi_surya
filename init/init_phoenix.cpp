@@ -90,11 +90,11 @@ void vendor_load_properties() {
     } else if (region == "INDIA") {
         for (const auto &source : ro_props_default_source_order) {
             set_ro_build_prop(source, "fingerprint",
-                              "POCO/phoenixin/phoenixin:10/QKQ1.190825.002/V11.0.4.0.QGHINXM:user/release-keys");
+                              "POCO/phoenixin/phoenixin:10/QKQ1.190825.002/V11.0.6.0.QGHINXM:user/release-keys");
             set_ro_product_prop(source, "brand", "POCO");
             set_ro_product_prop(source, "device", "phoenixin");
             set_ro_product_prop(source, "model", "POCO X2");
         }
-        property_override("ro.build.description", "phoenixin-user 10 QKQ1.190825.002 V11.0.4.0.QGHINXM release-keys");
+        property_override("ro.build.description", "phoenixin-user 10 QKQ1.190825.002 V11.0.6.0.QGHINXM release-keys");
     }
 }
