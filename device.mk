@@ -97,6 +97,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.aware.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.rtt.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-service.phoenix
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
