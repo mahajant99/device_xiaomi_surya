@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.content.om.IOverlayManager;
 import android.content.om.OverlayInfo;

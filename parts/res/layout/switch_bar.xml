@@ -41,6 +41,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:background="@null"
-        android:theme="@style/DeviceSettings.SwitchBar.Switch" />
+        android:theme="@style/Theme.Main.SwitchBar.Switch" />
 
 </LinearLayout>

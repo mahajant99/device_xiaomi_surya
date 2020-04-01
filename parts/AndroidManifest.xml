@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.settings.device"
+    package="org.lineageos.settings"
     android:versionCode="3"
     android:versionName="3.0"
     android:sharedUserId="android.uid.system">
@@ -18,7 +18,7 @@
         android:label="@string/device_settings_app_name"
         android:persistent="true">
 
-        <receiver android:name="org.lineageos.settings.device.BootCompletedReceiver">
+        <receiver android:name="org.lineageos.settings.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -28,7 +28,7 @@
         <activity
             android:name=".DevicePreferenceActivity"
             android:label="@string/device_specific_settings_title"
-            android:theme="@style/DeviceSettings">
+            android:theme="@style/Theme.Main">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -43,9 +43,9 @@
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
-            android:theme="@style/DeviceSettings">
+            android:theme="@style/Theme.Main">
             <intent-filter>
-                <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
+                <action android:name="org.lineageos.settings.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.provider.Settings;
 import android.content.BroadcastReceiver;
@@ -23,7 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
-import org.lineageos.settings.device.doze.DozeUtils;
+import org.lineageos.settings.doze.DozeUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
