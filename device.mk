@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Include pixelgapps
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/phoenix/phoenix-vendor.mk)
 
