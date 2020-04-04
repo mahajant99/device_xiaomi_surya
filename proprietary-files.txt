@@ -40,9 +40,9 @@ product/lib64/vendor.qti.imsrtpservice@2.1.so
 # Power-off charging daemon
 bin/charger
 
-# Soundfx - from LA.UM.8.9.r1-08400-SM6xx.0
+# Soundfx - from LA.UM.8.9.r1-08300-SM6xx.0
 vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/libvolumelistener.so:|672ad577dab5221bdd7f840d87313e3483aebde0
-vendor/li645/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so|c25cc5e8c3622eb97d3bb4814aeb301c01d8b046
+vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so|c25cc5e8c3622eb97d3bb4814aeb301c01d8b046
 
 # Telephony
 etc/permissions/privapp-permissions-qti.xml
@@ -57,5 +57,5 @@ product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
-# Telephony (qti-telephony-common) - from LA.UM.8.9.r1-08400-SM6xx.0
+# Telephony (qti-telephony-common) - from LA.UM.8.9.r1-08300-SM6xx.0
 product/framework/qti-telephony-common.jar|411e1eda313b38205dd89a012d898f74e2ddaee0
