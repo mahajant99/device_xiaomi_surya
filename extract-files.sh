@@ -52,4 +52,17 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
+DEVICE_BLOB_ROOT="${LINEAGE_ROOT}/vendor/${VENDOR}/${DEVICE}/proprietary"
+
+#
+# Remove android.hidl.base@1.0.so requirement
+#
+function fix_hidl_base () {
+    sed -i \
+        's/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/' \
+        "$DEVICE_BLOB_ROOT"/"$1"
+}
+
+fix_hidl_base lib64/libwfdnative.so
+
 "${MY_DIR}/setup-makefiles.sh"

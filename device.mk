@@ -128,3 +128,15 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libnl \
+    libqdMetaData \
+    libqdMetaData.system
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
