@@ -1,0 +1,2 @@
+vendor.camera.       u:object_r:vendor_camera_prop:s0
+persist.camera.      u:object_r:vendor_camera_prop:s0

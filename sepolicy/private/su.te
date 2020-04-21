@@ -1,0 +1,2 @@
+allow su bt_firmware_file:filesystem getattr;
+allow su firmware_file:filesystem getattr;

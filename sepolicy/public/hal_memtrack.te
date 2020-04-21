@@ -1,0 +1,2 @@
+allow hal_memtrack sysfs_kgsl:dir search;
+allow hal_memtrack sysfs_kgsl:file r_file_perms;

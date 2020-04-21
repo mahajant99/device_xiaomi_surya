@@ -1,1 +1,11 @@
+permissive init;
+
+# vendor_overlay
 allow init vendor_configs_file:dir mounton;
+allow init vendor_overlay_file:dir mounton;
+allow init vendor_file:file mounton;
+
+allow init adsprpcd_file:dir { create rmdir };
+allow init bt_firmware_file:dir { create rmdir };
+allow init firmware_file:dir { create rmdir };
+allow init sysfs_graphics:file rw_file_perms;
