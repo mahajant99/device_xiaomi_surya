@@ -204,16 +204,12 @@ public class ThermalSettingsFragment extends PreferenceFragment
         switch (state) {
             case ThermalUtils.STATE_BENCHMARK:
                 return R.drawable.ic_thermal_benchmark;
-            case ThermalUtils.STATE_BROWSER:
-                return R.drawable.ic_thermal_browser;
             case ThermalUtils.STATE_CAMERA:
                 return R.drawable.ic_thermal_camera;
             case ThermalUtils.STATE_DIALER:
                 return R.drawable.ic_thermal_dialer;
             case ThermalUtils.STATE_GAMING:
                 return R.drawable.ic_thermal_gaming;
-            case ThermalUtils.STATE_YOUTUBE:
-                return R.drawable.ic_thermal_youtube;
             case ThermalUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_thermal_default;
@@ -246,11 +242,9 @@ public class ThermalSettingsFragment extends PreferenceFragment
         private final int[] items = {
                 R.string.thermal_default,
                 R.string.thermal_benchmark,
-                R.string.thermal_browser,
                 R.string.thermal_camera,
                 R.string.thermal_dialer,
                 R.string.thermal_gaming,
-                R.string.thermal_youtube
         };
 
         private ModeAdapter(Context context) {
@@ -382,9 +376,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
                     mThermalUtils.writePackage(entry.info.packageName,
                             ThermalUtils.STATE_BENCHMARK);
                     break;
-                case ThermalUtils.STATE_BROWSER:
-                    mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_BROWSER);
-                    break;
                 case ThermalUtils.STATE_CAMERA:
                     mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_CAMERA);
                     break;
@@ -393,9 +384,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
                     break;
                 case ThermalUtils.STATE_GAMING:
                     mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_GAMING);
-                    break;
-                case ThermalUtils.STATE_YOUTUBE:
-                    mThermalUtils.writePackage(entry.info.packageName, ThermalUtils.STATE_YOUTUBE);
                     break;
             }
             notifyDataSetChanged();
