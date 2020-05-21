@@ -37,6 +37,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DozeUtils.checkDozeService(context);
         // Force apply our default value for doze if it is not set.
         DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
-        ThermalUtils.startService(context);
+        ThermalUtils.initialize(context);
     }
 }
