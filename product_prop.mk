@@ -16,6 +16,7 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.a2dp_offload.supported=false \
     persist.bluetooth.a2dp_offload.disabled=true \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
     vendor.audio.feature.a2dp_offload.enable=false \
     persist.vendor.qcom.bluetooth.enable.splita2dp=false
 
@@ -32,5 +33,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.telephony.default_network=22,22 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1 
+    persist.dbg.wfc_avail_ovr=1
 
