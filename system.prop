@@ -46,3 +46,6 @@ persist.vendor.delta_time.enable=true
 
 # WiFi
 wifi.interface=wlan0
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
