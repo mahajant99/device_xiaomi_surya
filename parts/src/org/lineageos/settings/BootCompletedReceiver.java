@@ -16,34 +16,21 @@
 
 package org.lineageos.settings;
 
-import android.provider.Settings;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.utils.RefreshRateUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        try {
-            // We need to reset this setting to trigger an update in display service
-            final float refreshRate = Settings.System.getFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, 120.0f);
-            Thread.sleep(500);
-            Settings.System.putFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, 120.0f);
-            Thread.sleep(500);
-            Settings.System.putFloat(context.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, refreshRate);
-        } catch (Exception e) {
-            // Ignore
-        }
+        // Refresh rate
+        RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(context));
 
         // Doze
         DiracUtils.initialize(context);
