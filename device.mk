@@ -193,4 +193,5 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # WiFi
 PRODUCT_PACKAGES += \
+    TetheringConfigOverlay \
     WifiOverlay
