@@ -1,0 +1,14 @@
+[
+    {
+        "remote":       "github",
+        "repository":   "mahajant99/kernel_xiaomi_phoenix",
+        "target_path":  "kernel/xiaomi/phoenix",
+        "revision":     "lineage-17.1"
+    },
+    {
+        "remote":       "github",
+        "repository":   "mahajant99/vendor_xiaomi_phoenix",
+        "target_path":  "vendor/xiaomi/phoenix",
+        "revision":     "lineage-17.1"
+    }
+]
