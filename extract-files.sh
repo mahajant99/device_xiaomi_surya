@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=phoenix
+DEVICE=surya
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

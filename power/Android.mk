@@ -4,7 +4,7 @@ LOCAL_PATH := $(call my-dir)
 # HAL module implemenation stored in
 # hw/<POWERS_HARDWARE_MODULE_ID>.<ro.hardware>.so
 include $(CLEAR_VARS)
-LOCAL_MODULE := android.hardware.power@1.2-service.phoenix
+LOCAL_MODULE := android.hardware.power@1.2-service.surya
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin

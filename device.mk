@@ -15,7 +15,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/phoenix/phoenix-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/surya/surya-vendor.mk)
 
 -include $(LOCAL_PATH)/system_prop.mk
 -include $(LOCAL_PATH)/product_prop.mk
@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_phoenix
+    android.hardware.light@2.0-service.xiaomi_surya
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -115,7 +115,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.phoenix
+    android.hardware.power@1.2-service.surya
 
 # Telephony
 PRODUCT_PACKAGES += \

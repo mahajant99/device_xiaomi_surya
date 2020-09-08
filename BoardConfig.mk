@@ -6,7 +6,7 @@
 
 BUILD_BROKEN_DUP_RULES := true
 
-DEVICE_PATH := device/xiaomi/phoenix
+DEVICE_PATH := device/xiaomi/surya
 
 # Architecture
 TARGET_ARCH := arm64
@@ -29,7 +29,7 @@ TARGET_USES_64_BIT_BINDER := true
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := phoenix,phoenixin
+TARGET_OTA_ASSERT_DEVICE := surya
 TARGET_NO_BOOTLOADER := true
 
 # Bootloader
@@ -79,8 +79,8 @@ BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_phoenix
-TARGET_RECOVERY_DEVICE_MODULES := libinit_phoenix
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
+TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
 
 # Kernel
 BOARD_RAMDISK_OFFSET := 0x01000000
@@ -96,9 +96,9 @@ BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  TARGET_KERNEL_CONFIG := phoenix_defconfig
+  TARGET_KERNEL_CONFIG := surya_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
-  TARGET_KERNEL_SOURCE := kernel/xiaomi/phoenix
+  TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 endif
 
 # Platform
@@ -175,5 +175,5 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
--include vendor/xiaomi/phoenix/BoardConfigVendor.mk
+-include vendor/xiaomi/surya/BoardConfigVendor.mk
 

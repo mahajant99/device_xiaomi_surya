@@ -4,18 +4,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, device/xiaomi/phoenix/device.mk)
+$(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_phoenix
-PRODUCT_DEVICE := phoenix
-PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi K30
+PRODUCT_NAME := lineage_surya
+PRODUCT_DEVICE := surya
+PRODUCT_BRAND := POCO
+PRODUCT_MODEL := POCO X3
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT := POCO/phoenixin/phoenixin:10/QKQ1.190825.002/V11.0.6.0.QGHINXM:user/release-keys
+BUILD_FINGERPRINT := POCO/surya_global/surya:10/QKQ1.200512.002/V12.0.2.0.QJGMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
