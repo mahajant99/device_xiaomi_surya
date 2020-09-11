@@ -120,6 +120,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.surya
 
+# OTA
+PRODUCT_HOST_PACKAGES += \
+    signapk
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
