@@ -27,6 +27,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
+    debug.hwui.renderer=skiavk \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
 # Smart fps switching
