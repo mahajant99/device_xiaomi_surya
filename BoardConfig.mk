@@ -164,7 +164,9 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     device/qcom/sepolicy/generic/public \
-    device/qcom/sepolicy/qva/public
+    device/qcom/sepolicy/generic/public/attribute \
+    device/qcom/sepolicy/qva/public \
+    device/qcom/sepolicy/qva/public/attribute
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
