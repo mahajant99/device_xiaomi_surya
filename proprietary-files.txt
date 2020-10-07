@@ -4,6 +4,11 @@
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
+# Camera
+bin/cameraserver
+lib/libcameraservice.so
+product/lib/vendor.qti.hardware.camera.device@1.0.so
+
 # DPM
 framework/tcmclient.jar
 product/bin/dpmd
@@ -26,16 +31,20 @@ product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
 
 # IMS
--product/priv-app/ims/ims.apk|600c6d03c03f88f35c51ba8e6b1a4cb7d70b94e6
-lib64/libdiag_system.so
+product/lib64/lib-imsvideocodec.so
+product/lib64/lib-imsvt.so
+product/lib64/lib-imsvtextutils.so
+product/lib64/lib-imsvtutils.so
+product/lib64/libdiag_system.so
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
-product/lib64/lib-imsvideocodec.so
-product/lib64/lib-imsvtextutils.so
-product/lib64/lib-imsvt.so
-product/lib64/lib-imsvtutils.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
+-product/priv-app/ims/ims.apk
+
+# NFC
+etc/permissions/com.nxp.nfc.xml
+-framework/com.nxp.nfc.jar
 
 # Power-off charging daemon
 bin/charger
@@ -57,5 +66,5 @@ product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
-# Telephony (qti-telephony-common) - from LA.UM.8.9.r1-08300-SM6xx.0
-product/framework/qti-telephony-common.jar|411e1eda313b38205dd89a012d898f74e2ddaee0
+# Telephony (qti-telephony-common)
+product/framework/qti-telephony-common.jar
