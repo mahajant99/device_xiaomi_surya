@@ -74,17 +74,14 @@ void vendor_load_properties() {
         property_override(prop_name.c_str(), value.c_str(), false);
     };
 
-    std::string region;
-    region = GetProperty("ro.boot.hwc", "");
-
-    if (region == "Global") {
-        for (const auto &source : ro_props_default_source_order) {
-            set_ro_build_prop(source, "fingerprint",
-                               "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
-            set_ro_product_prop(source, "brand", "POCO");
-            set_ro_product_prop(source, "device", "surya");
-            set_ro_product_prop(source, "model", "POCO X3 NFC");
-        }
-        property_override("ro.build.description", "surya-user 10 QKQ1.200512.002 V12.0.2.0.QJGMIXM release-keys");
+    for (const auto &source : ro_props_default_source_order) {
+        set_ro_build_prop(source, "fingerprint",
+                          "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+        set_ro_product_prop(source, "brand", "POCO");
+        set_ro_product_prop(source, "device", "surya");
+        set_ro_product_prop(source, "model", "M2007J20CG");
     }
+    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+    property_override("ro.build.description", "surya_global-user 10 QKQ1.200512.002 V12.0.2.0.QJGMIXM release-keys");
 }
