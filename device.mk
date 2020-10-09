@@ -17,6 +17,9 @@ $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/surya/surya-vendor.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 -include $(LOCAL_PATH)/system_prop.mk
 -include $(LOCAL_PATH)/product_prop.mk
 
