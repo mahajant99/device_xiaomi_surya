@@ -60,7 +60,7 @@ public class DevicePreferenceFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        mPrefMinRefreshRate.setValueIndex(RefreshRateUtils.getRefreshRate(getActivity()));
+        mPrefMinRefreshRate.setValue(Integer.toString(RefreshRateUtils.getRefreshRate(getActivity())));
         mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getEntry());
         try {
             mPrefPillStyleNotch.setChecked(
@@ -79,8 +79,10 @@ public class DevicePreferenceFragment extends PreferenceFragment {
                     if (KEY_MIN_REFRESH_RATE.equals(key)) {
                         RefreshRateUtils.setRefreshRate(getActivity(), Integer.parseInt((String) value));
                         RefreshRateUtils.setFPS(Integer.parseInt((String) value));
-                        mPrefMinRefreshRate.setValueIndex(Integer.parseInt((String) value));
-                        mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getEntry());
+                        int MinRefreshRateIndex = mPrefMinRefreshRate
+                                .findIndexOfValue((String) value);
+                        mPrefMinRefreshRate
+                                .setSummary(mPrefMinRefreshRate.getEntries()[MinRefreshRateIndex]);
                     } else if (KEY_PILL_STYLE_NOTCH.equals(key)) {
                         try {
                             mOverlayService.setEnabled(
