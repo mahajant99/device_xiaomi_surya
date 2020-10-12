@@ -1,10 +1,10 @@
-# ANT+
+# ANT+ - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 -lib/libantradio.so
 -lib64/libantradio.so
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
-# Camera
+# Camera - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 bin/cameraserver
 lib/libcameraservice.so
 product/lib/vendor.qti.hardware.camera.device@1.0.so
@@ -83,7 +83,7 @@ product/etc/CarrierSettings/vodafone_nl.pb|48aedcec52ed2a4ac6641428ca1b3a2f013bd
 product/etc/CarrierSettings/xfinity_us.pb|1b4744e6887943248d1a21282f1bc3b0788ee52a
 -product/priv-app/CarrierSettings/CarrierSettings.apk|5f6509438fd490f850b19e5295cc92edd19e6d4d
 
-# DPM
+# DPM - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 framework/tcmclient.jar
 product/bin/dpmd
 product/etc/dpm/dpm.conf
@@ -104,7 +104,7 @@ product/lib64/libdpmframework.so
 product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
 
-# IMS
+# IMS - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 product/lib64/lib-imsvideocodec.so
 product/lib64/lib-imsvt.so
 product/lib64/lib-imsvtextutils.so
@@ -116,18 +116,18 @@ product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 -product/priv-app/ims/ims.apk
 
-# NFC
+# NFC - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 etc/permissions/com.nxp.nfc.xml
 -framework/com.nxp.nfc.jar
 
-# Power-off charging daemon
+# Power-off charging daemon - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 bin/charger
 
-# Soundfx - from LA.UM.8.9.r1-08300-SM6xx.0
-vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/libvolumelistener.so:|672ad577dab5221bdd7f840d87313e3483aebde0
-vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so|c25cc5e8c3622eb97d3bb4814aeb301c01d8b046
+# Soundfx - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
+vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/libvolumelistener.so
+vendor/lib64/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so
 
-# Telephony
+# Telephony - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 etc/permissions/privapp-permissions-qti.xml
 etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
@@ -140,5 +140,5 @@ product/framework/qcrilhook.jar
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
-# Telephony (qti-telephony-common)
+# Telephony (qti-telephony-common) - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
 product/framework/qti-telephony-common.jar
