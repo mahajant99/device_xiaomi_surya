@@ -1,3 +1,7 @@
+# Data files
+/data/display(/.*)?      u:object_r:display_data_file:s0
+
+# Files in rootfs
 /dsp(/.*)?              u:object_r:adsprpcd_file:s0
 /firmware(/.*)?         u:object_r:firmware_file:s0
 /bt_firmware(/.*)?      u:object_r:bt_firmware_file:s0
