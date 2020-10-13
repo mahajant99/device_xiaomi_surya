@@ -141,4 +141,4 @@ product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # Telephony (qti-telephony-common) - from surya QKQ1.200512.002-V12.0.3.0.QJGMIXM
-product/framework/qti-telephony-common.jar
+#product/framework/qti-telephony-common.jar
