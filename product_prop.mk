@@ -21,6 +21,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.fluence.audiorec=true
 
+# Smart fps switching
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.vendor.smart_dfps.enable=false
+
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.telephony.default_network=22,22 \
