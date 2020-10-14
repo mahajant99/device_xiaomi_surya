@@ -3,4 +3,3 @@ allow untrusted_app_27 sysfs_kgsl:file r_file_perms;
 allow untrusted_app_27 sysfs_graphics:dir search;
 allow untrusted_app_27 sysfs_graphics:file r_file_perms;
 get_prop(untrusted_app_27, vendor_camera_prop);
-get_prop(untrusted_app_27, persist_camera_prop);
