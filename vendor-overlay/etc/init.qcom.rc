@@ -1,0 +1,5 @@
+on property:init.svc.vendor.cnss_diag=running
+    stop vendor.cnss_diag
+
+on property:init.svc.vendor.tcpdump=running
+    stop vendor.tcpdump
