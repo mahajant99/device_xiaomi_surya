@@ -1,3 +1,11 @@
+service displayfeature-hal-1-0 /vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
+    override
+    disabled
+
+service displayfeature /vendor/bin/displayfeature
+    override
+    disabled
+
 on property:init.svc.vendor.cnss_diag=running
     stop vendor.cnss_diag
 
