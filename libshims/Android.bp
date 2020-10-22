@@ -4,3 +4,10 @@ cc_library {
     compile_multilib: "64",
     vendor: true,
 }
+
+cc_library {
+    name: "libc++demangle_vendor",
+    stem: "libc++demangle",
+    proprietary: true,
+    whole_static_libs: ["libc++demangle"]
+}

@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libc++demangle_vendor \
     libcomparetf2
 
 # Device Settings
