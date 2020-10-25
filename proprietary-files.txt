@@ -57,6 +57,14 @@ product/lib64/libdpmtcm.so
 # DPM - from oneplus8 - qssi-user-11-RP1A.201005.001-2009051300-release-keys
 system_ext/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
 
+# FM
+lib64/fm_helium.so
+lib64/libfm-hci.so
+lib/fm_helium.so
+lib/libfm-hci.so
+product/lib64/vendor.qti.hardware.fm@1.0.so
+product/lib/vendor.qti.hardware.fm@1.0.so
+
 # IMS - from surya QKQ1.200512.002-V12.0.4.0.QJGMIXM
 product/lib64/lib-imsvideocodec.so
 product/lib64/lib-imsvt.so
