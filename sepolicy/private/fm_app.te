@@ -1,0 +1,1 @@
+allow vendor_fm_app hal_fm_hwservice:hwservice_manager find;
