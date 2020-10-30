@@ -28,7 +28,10 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <cstdlib>
 #include <fstream>
+#include <string.h>
+#include <sys/sysinfo.h>
 #include <unistd.h>
 #include <vector>
 
@@ -44,6 +47,13 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
+char const *heapstartsize;
+char const *heapgrowthlimit;
+char const *heapsize;
+char const *heapminfree;
+char const *heapmaxfree;
+char const *heaptargetutilization;
+
 std::vector<std::string> ro_props_default_source_order = {
     "",
     "product.",
@@ -56,9 +66,35 @@ void property_override(char const prop[], char const value[], bool add = true) {
 
     pi = (prop_info *)__system_property_find(prop);
     if (pi)
-        __system_property_update(pi, value, strlen(value));
+    __system_property_update(pi, value, strlen(value));
     else if (add)
-        __system_property_add(prop, strlen(prop), value, strlen(value));
+    __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
+void set_ro_build_prop(const std::string &source, const std::string &prop,
+                       const std::string &value, bool product = false) {
+    std::string prop_name;
+
+    if (product) {
+        prop_name = "ro.product." + source + prop;
+    } else {
+        prop_name = "ro." + source + "build." + prop;
+    }
+
+    property_override(prop_name.c_str(), value.c_str(), false);
+}
+
+void set_device_props(const std::string fingerprint, const std::string description,
+                      const std::string brand, const std::string device, const std::string model) {
+    for (const auto &source : ro_props_default_source_order) {
+        set_ro_build_prop(source, "fingerprint", fingerprint);
+        set_ro_build_prop(source, "brand", brand, true);
+        set_ro_build_prop(source, "device", device, true);
+        set_ro_build_prop(source, "model", model, true);
+    }
+
+    property_override("ro.build.fingerprint", fingerprint.c_str());
+    property_override("ro.build.description", description.c_str());
 }
 
 /* From Magisk@jni/magiskhide/hide_utils.c */
@@ -105,31 +141,74 @@ static void workaround_snet_properties() {
     chmod("/sys/fs/selinux/policy", 0440);
 }
 
-void vendor_load_properties() {
-    const auto set_ro_build_prop = [](const std::string &source,
-                                      const std::string &prop,
-                                      const std::string &value) {
-        auto prop_name = "ro." + source + "build." + prop;
-        property_override(prop_name.c_str(), value.c_str(), false);
-    };
+void load_device_properties() {
+    std::string hwname = GetProperty("ro.boot.hwname", "");
+    std::string region = GetProperty("ro.boot.hwc", "");
 
-    const auto set_ro_product_prop = [](const std::string &source,
-                                        const std::string &prop,
-                                        const std::string &value) {
-        auto prop_name = "ro.product." + source + prop;
-        property_override(prop_name.c_str(), value.c_str(), false);
-    };
-
-    for (const auto &source : ro_props_default_source_order) {
-        set_ro_build_prop(source, "fingerprint",
-                          "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
-        set_ro_product_prop(source, "brand", "POCO");
-        set_ro_product_prop(source, "device", "surya");
-        set_ro_product_prop(source, "model", "M2007J20CG");
+    if (hwname == "surya") {
+        if (region == "INT") {
+            set_device_props(
+                             "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys",
+                             "surya_global-user 10 QKQ1.200512.002 V12.0.4.0.QJGMIXM release-keys",
+                             "Poco", "surya", "M2007J20CG");
+        } else if (region == "India") {
+            set_device_props(
+                             "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys",
+                             "surya_in-user 10 QKQ1.200512.002 V12.0.5.0.QJGINXM release-keys",
+                             "Poco", "surya", "M2007J20CG");
+        }
+    } else if (hwname == "karna") {
+        if (region == "INT") {
+            set_device_props(
+                             "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys",
+                             "karna_global-user 10 QKQ1.200512.002 V12.0.4.0.QJGMIXM release-keys",
+                             "Poco", "karna", "M2007J20CI");
+        } else if (region == "India") {
+            set_device_props(
+                             "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys",
+                             "karna_in-user 10 QKQ1.200512.002 V12.0.5.0.QJGINXM release-keys",
+                             "Poco", "karna", "M2007J20CI");
+        }
     }
-    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
-    property_override("ro.build.description", "surya_global-user 10 QKQ1.200512.002 V12.0.4.0.QJGMIXM release-keys");
+}
+
+void check_device()
+{
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+
+    if (sys.totalram >= 5ull * 1024 * 1024 * 1024){
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.5";
+        heapminfree = "8m";
+        heapmaxfree = "32m";
+    } else if (sys.totalram >= 7ull * 1024 * 1024 * 1024) {
+        // from - phone-xhdpi-8192-dalvik-heap.mk
+        heapstartsize = "24m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.46";
+        heapminfree = "8m";
+        heapmaxfree = "48m";
+    }
+}
+
+void vendor_load_properties()
+{
+    check_device();
+
+    property_set("dalvik.vm.heapstartsize", heapstartsize);
+    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_set("dalvik.vm.heapsize", heapsize);
+    property_set("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_set("dalvik.vm.heapminfree", heapminfree);
+    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+
+    load_device_properties();
 
     // Workaround SafetyNet
     workaround_snet_properties();

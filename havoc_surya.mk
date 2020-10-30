@@ -13,10 +13,8 @@ $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 PRODUCT_NAME := havoc_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
-PRODUCT_MODEL := M2007J20CG
+PRODUCT_MODEL := POCO X3
 PRODUCT_MANUFACTURER := Xiaomi
-
-BUILD_FINGERPRINT := POCO/surya_global/surya:10/QKQ1.200512.002/V12.0.4.0.QJGMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
