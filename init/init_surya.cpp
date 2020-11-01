@@ -172,6 +172,20 @@ void load_device_properties() {
     }
 }
 
+
+void nfc_check()
+{
+    std::string hwname = GetProperty("ro.boot.hwname", "");
+
+    char nfc_prop[] = "ro.hw.nfc";
+
+    if (hwname == "surya"){
+        property_override(nfc_prop, "1");
+    } else if (hwname == "karna"){
+        property_override(nfc_prop, "0");
+    }
+}
+
 void check_device()
 {
     struct sysinfo sys;
@@ -209,6 +223,8 @@ void vendor_load_properties()
     SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
 
     load_device_properties();
+
+    nfc_check();
 
     // Workaround SafetyNet
     workaround_snet_properties();
