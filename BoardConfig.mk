@@ -56,9 +56,6 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# Charger Mode
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
