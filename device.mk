@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
     DevicesOverlay \
     DevicesAndroidOverlay
 
+# Permissions
+PRODUCT_COPY_FILES += \
+     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/handheld_core_hardware.xml
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.surya
