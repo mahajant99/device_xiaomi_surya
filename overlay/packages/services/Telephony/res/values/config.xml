@@ -14,9 +14,6 @@
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
-    <!-- The package name for the platform carrier config app, bundled with system image. -->
-    <string name="platform_carrier_config_package" translatable="false">com.google.android.carrier</string>
-
     <!-- String indicating the package name of the device ImsService implementation for MMTEL. -->
     <string name="config_ims_mmtel_package" translatable="false">org.codeaurora.ims</string>
 
