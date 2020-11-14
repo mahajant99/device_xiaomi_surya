@@ -129,7 +129,7 @@ void vendor_load_properties() {
     }
     property_override("ro.build.fingerprint", fp);
     property_override("ro.bootimage.build.fingerprint", fp);
-    property_override("ro.build.description", "surya_global-user 10 QKQ1.200512.002 V12.0.3.0.QJGMIXM release-keys");
+    property_override("ro.build.description", "surya_global-user 10 QKQ1.200512.002 V12.0.4.0.QJGMIXM release-keys");
 
     // Workaround SafetyNet
     workaround_snet_properties();
