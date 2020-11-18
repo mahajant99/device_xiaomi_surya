@@ -99,7 +99,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal
+    android.hardware.sensors@2.0-service.multihal \
+    vendor.qti.hardware.display.mapper@1.1.vendor
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
