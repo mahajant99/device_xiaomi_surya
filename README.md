@@ -1,9 +1,9 @@
 Copyright (C) 2020 The LineageOS Project
 
-Device configuration for Xiaomi POCO X3 / X3 NFC
+Unified Device Tree for Xiaomi POCO X3 / X3 NFC
 =========================================
 
-The Xiaomi POCO X3 / X3 NFC (codenamed _"surya / karna"_) are mid range smartphones from Xiaomi's sub-brand Redmi and Poco, respectively.
+The Xiaomi POCO X3 / X3 NFC (codenamed _"karna / surya"_) are mid range smartphones from Xiaomi's sub-brand Redmi and Poco, respectively.
 
 Both devices were announced and released in September 2020.
 
@@ -17,7 +17,7 @@ GPU     | Adreno 618
 Memory  | 6/8 GB RAM
 Shipped Android Version | 10 with MIUI 12
 Storage | 64/128/256 GB
-Battery | Non-removable Li-Po 4500 mAh battery
+Battery | Non-removable Li-Po 6000/5160 mAh battery
 Display | 1080 x 2400 pixels, 20:9 ratio, 6.67 inches, IPS LCD (~395 ppi density)
 
 ## Device picture
