@@ -3,6 +3,18 @@
         "remote":       "github",
         "repository":   "mahajant99/vendor_xiaomi_surya",
         "target_path":  "vendor/xiaomi/surya",
-        "revision":     "ten"
+        "branch":     "ten"
+    },
+    {
+        "remote":       "github",
+        "repository":   "mahajant99/kernel_xiaomi_surya",
+        "target_path":  "kernel/xiaomi/surya",
+        "branch":     "ten"
+    },
+    {
+        "remote":       "github",
+        "repository":   "LineageOS/android_packages_resources_devicesettings",
+        "target_path":  "packages/resources/devicesettings",
+        "branch":     "lineage-18.0"
     }
 ]
