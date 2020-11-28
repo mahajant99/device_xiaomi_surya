@@ -33,3 +33,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
     persist.sys.fflag.override.settings_network_and_internet_v2=true
+
+# WFD
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.latch_unsignaled=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
