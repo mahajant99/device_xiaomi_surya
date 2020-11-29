@@ -34,6 +34,34 @@ lib64/librefocus.so
 lib64/libqvrcamera_client.qti.so
 product/lib/vendor.qti.hardware.camera.device@1.0.so
 
+# Display Hardware - from surya QKQ1.200512.002-V12.0.4.0.QJGMIXM
+product/lib/vendor.display.config@1.0.so
+product/lib/vendor.display.config@1.1.so
+product/lib/vendor.display.config@1.2.so
+product/lib/vendor.display.config@1.3.so
+product/lib/vendor.display.config@1.4.so
+product/lib/vendor.display.config@1.5.so
+product/lib/vendor.display.config@1.6.so
+product/lib/vendor.display.config@1.7.so
+product/lib/vendor.display.config@1.8.so
+product/lib/vendor.display.config@1.9.so
+product/lib/vendor.display.config@1.10.so
+product/lib/vendor.display.config@1.11.so
+product/lib/vendor.display.config@1.12.so
+product/lib64/vendor.display.config@1.0.so
+product/lib64/vendor.display.config@1.1.so
+product/lib64/vendor.display.config@1.2.so
+product/lib64/vendor.display.config@1.3.so
+product/lib64/vendor.display.config@1.4.so
+product/lib64/vendor.display.config@1.5.so
+product/lib64/vendor.display.config@1.6.so
+product/lib64/vendor.display.config@1.7.so
+product/lib64/vendor.display.config@1.8.so
+product/lib64/vendor.display.config@1.9.so
+product/lib64/vendor.display.config@1.10.so
+product/lib64/vendor.display.config@1.11.so
+product/lib64/vendor.display.config@1.12.so
+
 # DPM - from surya QKQ1.200512.002-V12.0.4.0.QJGMIXM
 framework/tcmclient.jar
 product/bin/dpmd
