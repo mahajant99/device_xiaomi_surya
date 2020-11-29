@@ -55,6 +55,34 @@ product/lib64/libdpmframework.so
 product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
 
+# Display Hardware - from surya QKQ1.200512.002-V12.0.4.0.QJGMIXM
+product/lib/vendor.display.config@1.0.so
+product/lib/vendor.display.config@1.1.so
+product/lib/vendor.display.config@1.2.so
+product/lib/vendor.display.config@1.3.so
+product/lib/vendor.display.config@1.4.so
+product/lib/vendor.display.config@1.5.so
+product/lib/vendor.display.config@1.6.so
+product/lib/vendor.display.config@1.7.so
+product/lib/vendor.display.config@1.8.so
+product/lib/vendor.display.config@1.9.so
+product/lib/vendor.display.config@1.10.so
+product/lib/vendor.display.config@1.11.so
+product/lib/vendor.display.config@1.12.so
+product/lib64/vendor.display.config@1.0.so
+product/lib64/vendor.display.config@1.1.so
+product/lib64/vendor.display.config@1.2.so
+product/lib64/vendor.display.config@1.3.so
+product/lib64/vendor.display.config@1.4.so
+product/lib64/vendor.display.config@1.5.so
+product/lib64/vendor.display.config@1.6.so
+product/lib64/vendor.display.config@1.7.so
+product/lib64/vendor.display.config@1.8.so
+product/lib64/vendor.display.config@1.9.so
+product/lib64/vendor.display.config@1.10.so
+product/lib64/vendor.display.config@1.11.so
+product/lib64/vendor.display.config@1.12.so
+
 # FM
 lib64/fm_helium.so
 lib64/libfm-hci.so
