@@ -91,6 +91,18 @@ lib64/libmmrtpencoder.so
 etc/permissions/com.nxp.nfc.xml
 -framework/com.nxp.nfc.jar
 
+# Postprocessing - from surya QKQ1.200512.002-V12.0.4.0.QJGMIXM
+product/lib/vendor.display.color@1.0.so
+product/lib/vendor.display.color@1.1.so
+product/lib/vendor.display.color@1.2.so
+product/lib/vendor.display.color@1.3.so
+product/lib/vendor.display.postproc@1.0.so
+product/lib64/vendor.display.color@1.0.so
+product/lib64/vendor.display.color@1.1.so
+product/lib64/vendor.display.color@1.2.so
+product/lib64/vendor.display.color@1.3.so
+product/lib64/vendor.display.postproc@1.0.so
+
 # Power-off charging daemon - from Davinci
 bin/charger
 
