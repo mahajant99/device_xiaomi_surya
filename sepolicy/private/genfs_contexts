@@ -1,3 +1,5 @@
 # sysfs
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone/type u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/white/delay_off           u:object_r:sysfs_leds:s0 
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/white/delay_on           u:object_r:sysfs_leds:s0 

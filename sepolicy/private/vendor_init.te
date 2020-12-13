@@ -5,3 +5,5 @@ set_prop(vendor_init, vendor_camera_prop)
 allow vendor_init persist_file:lnk_file read;
 allow vendor_init persist_debug_prop:file read;
 allow vendor_init system_file:file getattr;
+allow vendor_init system_data_file:dir { ioctl open read setattr };
+allow vendor_init tombstone_data_file:dir { ioctl open read setattr };

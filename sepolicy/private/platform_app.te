@@ -1,6 +1,8 @@
 permissive platform_app;
 
+ allow platform_app nfc_service:service_manager find;
 allow platform_app sysfs_kgsl:dir search;
 allow platform_app sysfs_kgsl:file r_file_perms;
 allow platform_app sysfs_graphics:dir search;
 allow platform_app sysfs_graphics:file r_file_perms;
+allow platform_app sysfs_fps:file { getattr open read };
