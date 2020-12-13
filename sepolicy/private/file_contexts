@@ -21,3 +21,6 @@
 
 # Kernel modules in /system
 /system/lib/modules(/.*)?    u:object_r:system_file:s0
+
+# Measured FPS
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps                      u:object_r:sysfs_fps:s0

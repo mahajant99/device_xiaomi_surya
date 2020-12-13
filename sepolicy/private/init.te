@@ -9,3 +9,10 @@ allow init adsprpcd_file:dir { create rmdir };
 allow init bt_firmware_file:dir { create rmdir };
 allow init firmware_file:dir { create rmdir };
 allow init sysfs_graphics:file rw_file_perms;
+allow init bt_firmware_file:filesystem getattr;
+allow init firmware_file:filesystem getattr;
+allow init null_device:chr_file mounton;
+allow init sysfs:file setattr;
+allow init system_file:file mounton;
+
+
