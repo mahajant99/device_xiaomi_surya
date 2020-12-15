@@ -17,6 +17,10 @@ $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+# Camera
+PRODUCT_PACKAGES += \
+    libcomparetf2
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

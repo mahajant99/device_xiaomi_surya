@@ -12,6 +12,7 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
             "${PATCHELF}" --remove-needed "libmegface.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_megvii.so" "${2}"
+            "${PATCHELF}" --add-needed "libcomparetf2.so" "${2}"
             ;;
     esac
 }
