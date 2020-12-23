@@ -132,6 +132,9 @@ product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 -product/priv-app/ims/ims.apk
 
+# Input
+etc/excluded-input-devices.xml
+
 # Media
 lib/libFileMux.so
 lib/libmmosal.so
