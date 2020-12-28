@@ -149,24 +149,24 @@ void load_device_properties() {
         if (region == "INT") {
             set_device_props(
                              "google/sunfish/sunfish:11/RQ1A.201205.008/6943376:user/release-keys",
-                             "surya_global-user 10 QKQ1.200512.002 V12.0.4.0.QJGMIXM release-keys",
+                             "surya_global-user 10 QKQ1.200512.002 V12.0.6.0.QJGMIXM release-keys",
                              "Poco", "surya", "M2007J20CG");
         } else if (region == "India") {
             set_device_props(
                              "google/sunfish/sunfish:11/RQ1A.201205.008/6943376:user/release-keys",
-                             "surya_in-user 10 QKQ1.200512.002 V12.0.5.0.QJGINXM release-keys",
+                             "surya_in-user 10 QKQ1.200512.002 V12.0.8.0.QJGINXM release-keys",
                              "Poco", "surya", "M2007J20CG");
         }
     } else if (hwname == "karna") {
         if (region == "INT") {
             set_device_props(
                              "google/sunfish/sunfish:11/RQ1A.201205.008/6943376:user/release-keys",
-                             "karna_global-user 10 QKQ1.200512.002 V12.0.4.0.QJGMIXM release-keys",
+                             "karna_global-user 10 QKQ1.200512.002 V12.0.6.0.QJGMIXM release-keys",
                              "Poco", "karna", "M2007J20CI");
         } else if (region == "India") {
             set_device_props(
                              "google/sunfish/sunfish:11/RQ1A.201205.008/6943376:user/release-keys",
-                             "karna_in-user 10 QKQ1.200512.002 V12.0.5.0.QJGINXM release-keys",
+                             "karna_in-user 10 QKQ1.200512.002 V12.0.8.0.QJGINXM release-keys",
                              "Poco", "karna", "M2007J20CI");
         }
     }
