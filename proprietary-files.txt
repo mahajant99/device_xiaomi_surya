@@ -9,9 +9,7 @@ product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 
 # Camera - from surya QKQ1.200512.002-V12.0.4.0.QJGMIXM
-bin/cameraserver
 etc/init/cameraserver.rc
-lib/libcameraservice.so
 lib64/libCameraEffectJNI.so
 lib64/libarcsoft_deflicker.so
 lib64/libarcsoft_single_chart_calibration.so
