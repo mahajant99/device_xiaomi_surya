@@ -1,8 +1,0 @@
-on post-fs && property:ro.product.device=karna
-    mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
-
-on post-fs && property:ro.boot.hwc=India
-    mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
-
-on post-fs && property:ro.boot.hwc=India_PA
-    mount none /dev/null /system/app/NfcNci/NfcNci.apk bind

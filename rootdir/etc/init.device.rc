@@ -1,46 +1,17 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are
-# met:
-#     * Redistributions of source code must retain the above copyright
-#       notice, this list of conditions and the following disclaimer.
-#     * Redistributions in binary form must reproduce the above
-#       copyright notice, this list of conditions and the following
-#       disclaimer in the documentation and/or other materials provided
-#       with the distribution.
-#     * Neither the name of The Linux Foundation nor the names of its
-#       contributors may be used to endorse or promote products derived
-#       from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
-# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
-# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
-# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-#
+on post-fs && property:ro.product.device=karna
+    mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
 
-on property:ro.product.device=karna
-    disable nqnfcinfo
-    disable vendor.nfc_hal_service
-    disable nqnfc_1_2_hal_service
-    disable secure_element_hal_service
+on init 
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_movie
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still  
 
-on boot && property:ro.boot.hwc=India
-    stop nqnfcinfo
-    stop vendor.nfc_hal_service
-    stop nqnfc_1_2_hal_service
-    stop secure_element_hal_service
+on property:ro.boot.hwc=*
+    setprop vendor.boot.hwc ${ro.boot.hwc}   
 
-on boot && property:ro.boot.hwc=India_PA
-    stop nqnfcinfo
-    stop vendor.nfc_hal_service
-    stop nqnfc_1_2_hal_service
-    stop secure_element_hal_service
+on property:init.svc.vendor.cnss_diag=running
+    stop vendor.cnss_diag
+
+on property:init.svc.vendor.tcpdump=running
+    stop vendor.tcpdump
