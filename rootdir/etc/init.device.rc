@@ -1,5 +1,6 @@
 on post-fs && property:ro.product.device=karna
     mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
+    setprop ro.power_profile.override power_profile_karna
 
 on init 
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_hbm
