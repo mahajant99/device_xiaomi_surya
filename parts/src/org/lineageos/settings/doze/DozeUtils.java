@@ -70,9 +70,14 @@ public final class DozeUtils {
     }
 
     protected static boolean getProxCheckBeforePulse(Context context) {
-        // Disable proximity support in our Doze service
-        // TODO: Figure out why this doesn't work.
-        return false;
+        try {
+            Context con = context.createPackageContext("com.android.systemui", 0);
+            int id = con.getResources().getIdentifier("doze_proximity_check_before_pulse",
+                    "bool", "com.android.systemui");
+            return con.getResources().getBoolean(id);
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
     }
 
     public static boolean enableDoze(Context context, boolean enable) {
