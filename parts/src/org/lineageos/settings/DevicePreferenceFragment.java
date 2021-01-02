@@ -20,7 +20,6 @@ import android.content.om.IOverlayManager;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.widget.Toast;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -90,8 +89,6 @@ public class DevicePreferenceFragment extends PreferenceFragment {
                         } catch (RemoteException e) {
                             // We can do nothing
                         }
-                        Toast.makeText(getContext(),
-                                R.string.msg_device_need_restart, Toast.LENGTH_SHORT).show();
                     }
                     return true;
                 }
