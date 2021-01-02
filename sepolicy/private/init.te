@@ -14,5 +14,4 @@ allow init firmware_file:filesystem getattr;
 allow init null_device:chr_file mounton;
 allow init sysfs:file setattr;
 allow init system_file:file mounton;
-
-
+allow init vendor_configs_file:file mounton;

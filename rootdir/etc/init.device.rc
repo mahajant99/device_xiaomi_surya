@@ -1,5 +1,9 @@
 on post-fs && property:ro.product.device=karna
     mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.xml bind
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.hce.xml bind
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.hcef.xml bind
+    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.uicc.xml bind
     setprop ro.power_profile.override power_profile_karna
 
 on init 
