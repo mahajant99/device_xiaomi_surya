@@ -19,7 +19,8 @@
         android:key="pref_min_refresh_rate"
         android:title="@string/device_min_refresh_rate"
         android:entries="@array/device_refresh_rates"
-        android:entryValues="@array/device_refresh_rates_val"/>
+        android:entryValues="@array/device_refresh_rates_val"
+        android:defaultValue="3" />
 
      <SwitchPreference
         android:key="pref_pill_style_notch"
