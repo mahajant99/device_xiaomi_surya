@@ -33,17 +33,7 @@
 extern "C" {
 #endif
 
-#define NODE_MAX (64)
-
-#define SCALING_GOVERNOR_PATH "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
-#define DCVS_CPU0_SLACK_MAX_NODE "/sys/module/msm_dcvs/cores/cpu0/slack_time_max_us"
-#define DCVS_CPU0_SLACK_MIN_NODE "/sys/module/msm_dcvs/cores/cpu0/slack_time_min_us"
-#define MPDECISION_SLACK_MAX_NODE "/sys/module/msm_mpdecision/slack_time_max_us"
-#define MPDECISION_SLACK_MIN_NODE "/sys/module/msm_mpdecision/slack_time_min_us"
-#define SCALING_MIN_FREQ "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq"
-#define ONDEMAND_GOVERNOR "ondemand"
 #define INTERACTIVE_GOVERNOR "interactive"
-#define MSMDCVS_GOVERNOR "msm-dcvs"
 #define SCHEDUTIL_GOVERNOR "schedutil"
 
 #define INPUT_EVENT_WAKUP_MODE_OFF 4
@@ -54,19 +44,18 @@ extern "C" {
 
 #include <hardware/power.h>
 
-enum CPU_GOV_CHECK {
-    CPU0 = 0,
-    CPU1 = 1,
-    CPU2 = 2,
-    CPU3 = 3
-};
+enum CPU_GOV_CHECK { CPU0 = 0, CPU1 = 1, CPU2 = 2, CPU3 = 3 };
 
 void power_init(void);
-void power_hint(power_hint_t hint, void *data);
+void power_hint(power_hint_t hint, void* data);
 void set_interactive(int on);
+
+#define ARRAY_SIZE(x) (sizeof((x)) / sizeof((x)[0]))
+#define CHECK_HANDLE(x) ((x) > 0)
+#define UNUSED(x) UNUSED_##x __attribute__((__unused__))
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif //__POWER_COMMON_H___
+#endif  //__POWER_COMMON_H___
