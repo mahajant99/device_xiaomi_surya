@@ -32,11 +32,14 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Refresh rate
         RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(context));
 
-        // Doze
+        // Dirac
         DiracUtils.initialize(context);
+
+        // Doze
         DozeUtils.checkDozeService(context);
-        // Force apply our default value for doze if it is not set.
         DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
+
+        // Thermal Profiles
         ThermalUtils.initialize(context);
     }
 }
