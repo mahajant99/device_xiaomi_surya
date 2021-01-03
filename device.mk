@@ -63,6 +63,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.camera.device@1.0
+
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
