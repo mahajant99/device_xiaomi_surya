@@ -50,6 +50,9 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/device_settings_app_name" />
         </activity>
 
         <service android:name=".doze.DozeService"
