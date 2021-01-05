@@ -23,7 +23,7 @@
         android:defaultValue="3" />
 
      <SwitchPreference
-        android:key="pref_pill_style_notch"
-        android:title="@string/device_pill_style_notch"/>
+        android:key="pref_hide_camera_cutout"
+        android:title="@string/device_hide_camera_cutout"/>
         
 </PreferenceScreen>

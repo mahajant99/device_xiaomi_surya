@@ -123,9 +123,10 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
-# Notch style overlay
+# Notch hide overlay
 PRODUCT_PACKAGES += \
-    NotchNoFillOverlay
+    NotchHideOverlay \
+    NotchHideOverlaySystemUI
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

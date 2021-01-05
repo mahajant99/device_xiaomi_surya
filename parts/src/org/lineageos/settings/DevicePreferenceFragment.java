@@ -20,6 +20,7 @@ import android.content.om.IOverlayManager;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.widget.Toast;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -29,15 +30,16 @@ import androidx.preference.SwitchPreference;
 import org.lineageos.settings.utils.RefreshRateUtils;
 
 public class DevicePreferenceFragment extends PreferenceFragment {
-    private static final String OVERLAY_NO_FILL_PACKAGE = "org.lineageos.overlay.notch.nofill";
+    private static final String OVERLAY_NO_FILL_PACKAGE = "me.waveproject.overlay.notch.hide";
+    private static final String OVERLAY_NO_FILL_PACKAGE_SYSTEMUI = "me.waveproject.overlay.notch.hide.systemui";
 
     private static final String KEY_MIN_REFRESH_RATE = "pref_min_refresh_rate";
-    private static final String KEY_PILL_STYLE_NOTCH = "pref_pill_style_notch";
+    private static final String KEY_HIDE_CAMERA_CUTOUT = "pref_hide_camera_cutout";
 
     private IOverlayManager mOverlayService;
 
     private ListPreference mPrefMinRefreshRate;
-    private SwitchPreference mPrefPillStyleNotch;
+    private SwitchPreference mPrefHideCameraCutout;
 
 
     @Override
@@ -52,8 +54,8 @@ public class DevicePreferenceFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.device_prefs);
         mPrefMinRefreshRate = (ListPreference) findPreference(KEY_MIN_REFRESH_RATE);
         mPrefMinRefreshRate.setOnPreferenceChangeListener(PrefListener);
-        mPrefPillStyleNotch = (SwitchPreference) findPreference(KEY_PILL_STYLE_NOTCH);
-        mPrefPillStyleNotch.setOnPreferenceChangeListener(PrefListener);
+        mPrefHideCameraCutout = (SwitchPreference) findPreference(KEY_HIDE_CAMERA_CUTOUT);
+        mPrefHideCameraCutout.setOnPreferenceChangeListener(PrefListener);
     }
 
     @Override
@@ -62,8 +64,9 @@ public class DevicePreferenceFragment extends PreferenceFragment {
         mPrefMinRefreshRate.setValue(Integer.toString(RefreshRateUtils.getRefreshRate(getActivity())));
         mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getEntry());
         try {
-            mPrefPillStyleNotch.setChecked(
-                    !mOverlayService.getOverlayInfo(OVERLAY_NO_FILL_PACKAGE, 0).isEnabled());
+            mPrefHideCameraCutout.setChecked(
+                    mOverlayService.getOverlayInfo(OVERLAY_NO_FILL_PACKAGE, 0).isEnabled()
+                    || mOverlayService.getOverlayInfo(OVERLAY_NO_FILL_PACKAGE_SYSTEMUI, 0).isEnabled());
         } catch (RemoteException e) {
             // We can do nothing
         }
@@ -82,13 +85,17 @@ public class DevicePreferenceFragment extends PreferenceFragment {
                                 .findIndexOfValue((String) value);
                         mPrefMinRefreshRate
                                 .setSummary(mPrefMinRefreshRate.getEntries()[MinRefreshRateIndex]);
-                    } else if (KEY_PILL_STYLE_NOTCH.equals(key)) {
+                    } else if (KEY_HIDE_CAMERA_CUTOUT.equals(key)) {
                         try {
                             mOverlayService.setEnabled(
-                                    OVERLAY_NO_FILL_PACKAGE, !(boolean) value, 0);
+                                    OVERLAY_NO_FILL_PACKAGE, (boolean) value, 0);
+                            mOverlayService.setEnabled(
+                                    OVERLAY_NO_FILL_PACKAGE_SYSTEMUI, (boolean) value, 0);
                         } catch (RemoteException e) {
                             // We can do nothing
                         }
+                        Toast.makeText(getContext(),
+                                R.string.msg_device_need_restart, Toast.LENGTH_SHORT).show();
                     }
                     return true;
                 }

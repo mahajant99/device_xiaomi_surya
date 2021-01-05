@@ -17,12 +17,10 @@
 */
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:compileSdkVersion="29"
-    package="org.lineageos.overlay.notch.nofill"
-    platformBuildVersionCode="29">
-    <application android:extractNativeLibs="false"/>
+    package="me.waveproject.overlay.notch.hide">
+    <application android:hasCode="false" />
     <overlay
         android:isStatic="false"
-        android:priority="1"
+        android:priority="10"
         android:targetPackage="android"/>
 </manifest>

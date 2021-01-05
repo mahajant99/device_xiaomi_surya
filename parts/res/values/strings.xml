@@ -12,11 +12,12 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Redmi K30 / POCO X2 specific settings -->
+    <!-- POCO X3 specific settings -->
     <string name="device_specific_settings_title">Device-specific settings</string>
     <string name="device_specific_settings_summary">Cutout and refresh rate configuration</string>
     <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
-    <string name="device_pill_style_notch">Use camera cutout</string>
+    <string name="device_hide_camera_cutout">Hide camera cutout</string>
+    <string name="msg_device_need_restart">Please restart device for this to take effect.</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">Mi Sound Enhancer</string>
