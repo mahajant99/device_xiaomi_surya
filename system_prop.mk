@@ -31,7 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # App with ~20.5ms (16.6ms * 2 - 10.5ms - 2ms). The other values were calculated similarly.
 # Full comparison between the old vs. the new values are captured in
 # https://docs.google.com/spreadsheets/d/1a_5cVNY3LUAkeg-yL56rYQNwved6Hy-dvEcKSxp6f8k/edit
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.use_phase_offsets_as_durations=1
     debug.sf.late.sf.duration=10500000
     debug.sf.late.app.duration=20500000
