@@ -1,1 +1,2 @@
 allow hal_bluetooth qr_code_file:file rw_file_perms;
+allow hal_bluetooth vendor_fm_app:binder { call };
