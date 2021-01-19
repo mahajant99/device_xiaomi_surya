@@ -29,10 +29,34 @@ public class RefreshRateUtils {
         return sharedPref.getInt("refresh_rate", 3);
     }
 
+    public static int getPowerSaveRefreshRate(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences("parts_pref", Context.MODE_PRIVATE);
+        return sharedPref.getInt("power_save_refresh_rate", 2);
+    }
+
+    public static boolean getPowerSaveRefreshRateSwitch(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences("parts_pref", Context.MODE_PRIVATE);
+        return sharedPref.getBoolean("power_save_refresh_rate_switch", true);
+    }
+
     public static void setRefreshRate(Context context, int refreshRate) {
         SharedPreferences sharedPref = context.getSharedPreferences("parts_pref", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt("refresh_rate", refreshRate);
+        editor.commit();
+    }
+
+    public static void setPowerSaveRefreshRate(Context context, int refreshRate) {
+        SharedPreferences sharedPref = context.getSharedPreferences("parts_pref", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("power_save_refresh_rate", refreshRate);
+        editor.commit();
+    }
+
+    public static void setPowerSaveRefreshRateSwitch(Context context, boolean state) {
+        SharedPreferences sharedPref = context.getSharedPreferences("parts_pref", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean("power_save_refresh_rate_switch", state);
         editor.commit();
     }
 

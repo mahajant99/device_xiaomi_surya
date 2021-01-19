@@ -26,6 +26,12 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".PowerSaveModeChangeReceiver">
+            <intent-filter>
+                <action android:name="android.os.action.POWER_SAVE_MODE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name=".DevicePreferenceActivity"
             android:label="@string/device_specific_settings_title"

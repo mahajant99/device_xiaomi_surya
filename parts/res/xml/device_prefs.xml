@@ -15,15 +15,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ListPreference
-        android:key="pref_min_refresh_rate"
-        android:title="@string/device_min_refresh_rate"
-        android:entries="@array/device_refresh_rates"
-        android:entryValues="@array/device_refresh_rates_val"
-        android:defaultValue="3" />
+    <PreferenceCategory
+        android:title="@string/device_refresh_rate">
 
-     <SwitchPreference
-        android:key="pref_hide_camera_cutout"
-        android:title="@string/device_hide_camera_cutout"/>
-        
+        <ListPreference
+            android:key="pref_min_refresh_rate"
+            android:title="@string/device_min_refresh_rate"
+            android:entries="@array/device_refresh_rates"
+            android:entryValues="@array/device_refresh_rates_val"
+            android:defaultValue="3" />
+
+         <SwitchPreference
+            android:key="pref_power_save_refresh_rate_switch"
+            android:title="@string/device_power_save_refresh_rate_switch"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="pref_power_save_refresh_rate"
+            android:title="@string/device_power_save_refresh_rate"
+            android:entries="@array/device_power_save_refresh_rates"
+            android:entryValues="@array/device_power_save_refresh_rates_val"
+            android:defaultValue="2" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/device_cutout">
+
+        <SwitchPreference
+           android:key="pref_hide_camera_cutout"
+           android:title="@string/device_hide_camera_cutout"/>
+
+     </PreferenceCategory>
+
 </PreferenceScreen>

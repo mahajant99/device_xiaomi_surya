@@ -15,7 +15,11 @@
     <!-- POCO X3 specific settings -->
     <string name="device_specific_settings_title">Device-specific settings</string>
     <string name="device_specific_settings_summary">Cutout and refresh rate configuration</string>
-    <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
+    <string name="device_refresh_rate">DISPLAY REFRESH RATE</string>
+    <string name="device_cutout">NOTCH/CUTOUT</string>
+    <string name="device_min_refresh_rate">Minimum refresh rate</string>
+    <string name="device_power_save_refresh_rate">Battery saver refresh rate</string>
+    <string name="device_power_save_refresh_rate_switch">Automatically lower refresh rate when battery saver is active</string>
     <string name="device_hide_camera_cutout">Hide camera cutout</string>
     <string name="msg_device_need_restart">Please restart device for this to take effect.</string>
 
