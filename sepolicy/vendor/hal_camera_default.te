@@ -1,5 +1,7 @@
 type camera_persist_file, file_type, vendor_persist_type;
 
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
+hal_client_domain(hal_camera_default, hal_graphics_composer)
 hal_client_domain(hal_camera_default, hal_power)
 
 allow hal_camera_default proc_meminfo:file r_file_perms;
