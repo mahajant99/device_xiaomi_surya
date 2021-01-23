@@ -15,6 +15,6 @@
         "remote":       "github",
         "repository":   "LineageOS/android_packages_resources_devicesettings",
         "target_path":  "packages/resources/devicesettings",
-        "branch":     "lineage-18.0"
+        "branch":     "lineage-18.1"
     }
 ]
