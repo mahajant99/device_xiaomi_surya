@@ -47,6 +47,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DozeUtils.enableDoze(context, DozeUtils.isDozeEnabled(context));
 
         // Thermal Profiles
-        ThermalUtils.initialize(context);
+        ThermalUtils.startService(context);
     }
 }
