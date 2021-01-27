@@ -136,6 +136,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.surya
 
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
+
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
