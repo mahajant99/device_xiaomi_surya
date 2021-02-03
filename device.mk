@@ -150,10 +150,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
-# Remove Packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
