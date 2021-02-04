@@ -123,11 +123,6 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
-# Notch hide overlay
-PRODUCT_PACKAGES += \
-    NotchHideOverlay \
-    NotchHideOverlaySystemUI
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay

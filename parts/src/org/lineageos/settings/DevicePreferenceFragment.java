@@ -32,13 +32,9 @@ import androidx.preference.SwitchPreference;
 import org.lineageos.settings.utils.RefreshRateUtils;
 
 public class DevicePreferenceFragment extends PreferenceFragment {
-    private static final String OVERLAY_NO_FILL_PACKAGE = "me.waveproject.overlay.notch.hide";
-    private static final String OVERLAY_NO_FILL_PACKAGE_SYSTEMUI = "me.waveproject.overlay.notch.hide.systemui";
-
     private static final String KEY_MIN_REFRESH_RATE = "pref_min_refresh_rate";
     private static final String KEY_POWER_SAVE_REFRESH_RATE = "pref_power_save_refresh_rate";
     private static final String KEY_POWER_SAVE_REFRESH_RATE_SWITCH = "pref_power_save_refresh_rate_switch";
-    private static final String KEY_HIDE_CAMERA_CUTOUT = "pref_hide_camera_cutout";
 
     private IOverlayManager mOverlayService;
     private PowerManager mPowerManagerService;
@@ -46,7 +42,6 @@ public class DevicePreferenceFragment extends PreferenceFragment {
     private ListPreference mPrefMinRefreshRate;
     private ListPreference mPrefPowerSaveRefreshRate;
     private SwitchPreference mPrefPowerSaveRefreshRateSwitch;
-    private SwitchPreference mPrefHideCameraCutout;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -65,8 +60,6 @@ public class DevicePreferenceFragment extends PreferenceFragment {
         mPrefPowerSaveRefreshRate.setOnPreferenceChangeListener(PrefListener);
         mPrefPowerSaveRefreshRateSwitch = (SwitchPreference) findPreference(KEY_POWER_SAVE_REFRESH_RATE_SWITCH);
         mPrefPowerSaveRefreshRateSwitch.setOnPreferenceChangeListener(PrefListener);
-        mPrefHideCameraCutout = (SwitchPreference) findPreference(KEY_HIDE_CAMERA_CUTOUT);
-        mPrefHideCameraCutout.setOnPreferenceChangeListener(PrefListener);
     }
 
     @Override
@@ -77,13 +70,6 @@ public class DevicePreferenceFragment extends PreferenceFragment {
         mPrefPowerSaveRefreshRate.setValue(Integer.toString(RefreshRateUtils.getPowerSaveRefreshRate(getActivity())));
         mPrefPowerSaveRefreshRate.setSummary(mPrefPowerSaveRefreshRate.getEntry());
         mPrefPowerSaveRefreshRateSwitch.setChecked(RefreshRateUtils.getPowerSaveRefreshRateSwitch(getActivity()));
-        try {
-            mPrefHideCameraCutout.setChecked(
-                    mOverlayService.getOverlayInfo(OVERLAY_NO_FILL_PACKAGE, 0).isEnabled()
-                    || mOverlayService.getOverlayInfo(OVERLAY_NO_FILL_PACKAGE_SYSTEMUI, 0).isEnabled());
-        } catch (RemoteException e) {
-            // We can do nothing
-        }
     }
 
     private final Preference.OnPreferenceChangeListener PrefListener =
@@ -118,17 +104,6 @@ public class DevicePreferenceFragment extends PreferenceFragment {
                             RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(getActivity()));
                         }
                         mPrefPowerSaveRefreshRate.setEnabled((boolean) value ? true : false);
-                    } else if (KEY_HIDE_CAMERA_CUTOUT.equals(key)) {
-                        try {
-                            mOverlayService.setEnabled(
-                                    OVERLAY_NO_FILL_PACKAGE, (boolean) value, 0);
-                            mOverlayService.setEnabled(
-                                    OVERLAY_NO_FILL_PACKAGE_SYSTEMUI, (boolean) value, 0);
-                        } catch (RemoteException e) {
-                            // We can do nothing
-                        }
-                        Toast.makeText(getContext(),
-                                R.string.msg_device_need_restart, Toast.LENGTH_SHORT).show();
                     }
                     return true;
                 }

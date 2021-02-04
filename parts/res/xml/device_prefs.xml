@@ -38,14 +38,4 @@
             android:defaultValue="2" />
 
     </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/device_cutout">
-
-        <SwitchPreference
-           android:key="pref_hide_camera_cutout"
-           android:title="@string/device_hide_camera_cutout"/>
-
-     </PreferenceCategory>
-
 </PreferenceScreen>
