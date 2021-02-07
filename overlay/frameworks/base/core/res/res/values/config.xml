@@ -760,4 +760,7 @@
          config_defaultRefreshRate may be set to 0, in which case the value set for
          config_defaultPeakRefreshRate will act as the default frame rate. -->
     <integer name="config_defaultRefreshRate">90</integer>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">90</integer>
 </resources>
