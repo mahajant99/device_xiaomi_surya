@@ -330,13 +330,15 @@ vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
+# Fingerprint - FPC - from nullbytepl
+vendor/lib64/hw/fingerprint.fpc.default.so|645bf256da2db3ce60dddab9b3282ab7241bbcb0
 
 # Graphics firmware
 vendor/firmware/a615_zap.b00
