@@ -20,6 +20,8 @@
     <string name="device_power_save_refresh_rate">Battery saver refresh rate</string>
     <string name="device_power_save_refresh_rate_switch">Automatically lower refresh rate when battery saver is active</string>
     <string name="msg_device_need_restart">Please restart device for this to take effect.</string>
+    <string name="refresh_rate_tile_title">Refresh Rate</string>
+    <string name="refresh_rate_tile_disabled">Battery saver enabled</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">Mi Sound Enhancer</string>
