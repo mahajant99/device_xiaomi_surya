@@ -19,6 +19,12 @@
         android:label="@string/device_settings_app_name"
         android:persistent="true">
 
+        <receiver android:name=".EarlyStartReceiver" android:directBootAware="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <receiver android:name=".BootCompletedReceiver">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
