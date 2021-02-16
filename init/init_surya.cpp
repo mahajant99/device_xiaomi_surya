@@ -49,10 +49,12 @@ using std::string;
 
 std::vector<string> ro_props_default_source_order = {
     "",
+    "bootimage.",
+    "odm.",
     "product.",
     "system.",
     "system_ext.",
-    "vendor.",
+    "vendor."
 };
 
 void property_override(char const prop[], char const value[], bool add = true) {
@@ -95,8 +97,8 @@ void set_device_props(const string fingerprint, const string description,
 void load_device_properties() {
     string hwname = GetProperty("ro.boot.hwname", "");
 
-    string fingerprint = "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys";
-    string description = "sunfish-user 11 RQ1A.210105.002 6985033 release-keys";
+    string fingerprint = "google/sunfish/sunfish:11/RQ1A.210205.004/7038034:user/release-keys";
+    string description = "sunfish-user 11 RQ1A.210205.004 7038034 release-keys";
 
     if (hwname == "surya") {
         set_device_props(fingerprint, description, "Poco", "surya", "M2007J20CG");
