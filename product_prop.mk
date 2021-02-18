@@ -39,6 +39,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     vendor.display.disable_rotator_downscale=1 \
     ro.surface_flinger.has_wide_color_display=false
 
+# LMKD
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.low_ram=false \
+    ro.lmk.log_stats=true
+
 # Smart fps switching
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.smart_dfps.enable=false
