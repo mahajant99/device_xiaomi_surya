@@ -1,0 +1,22 @@
+#
+# Surya-specific initialization component
+#
+
+on init
+    chown system system /dev/goodix_fp
+    chmod 0644 /dev/goodix_fp
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/fingerdown_wait
+    chmod 0220 /sys/bus/platform/devices/soc/soc:fpc1020/fingerdown_wait
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
+
+service vendor.sensors.qti /vendor/bin/sensors.qti
+    class core
+    user system
+    group system
+    disabled
+
+service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
+    class core
+    user root
+    oneshot

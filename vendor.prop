@@ -1,0 +1,9 @@
+# Audio
+vendor.audio.feature.compr_voip.enable=false
+vendor.voice.path.for.pcm.voip=false
+
+# Display
+vendor.display.disable_idle_time_hdr=1
+vendor.display.disable_idle_time_video=1
+vendor.display.enable_default_color_mode=1
+vendor.display.idle_time=1100
