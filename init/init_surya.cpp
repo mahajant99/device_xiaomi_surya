@@ -50,6 +50,7 @@ using std::string;
 std::vector<string> ro_props_default_source_order = {
     "",
     "bootimage.",
+    "odm.",
     "product.",
     "system.",
     "system_ext.",
@@ -80,11 +81,14 @@ void set_ro_build_prop(const string &source, const string &prop,
     property_override(prop_name.c_str(), value.c_str(), false);
 }
 
-void set_device_props(const string brand, const string device, const string model) {
+void set_device_props(const string brand, const string device,
+			const string model, const string name) {
     for (const auto &source : ro_props_default_source_order) {
         set_ro_build_prop(source, "brand", brand, true);
         set_ro_build_prop(source, "device", device, true);
+        set_ro_build_prop(source, "product", device, false);
         set_ro_build_prop(source, "model", model, true);
+        set_ro_build_prop(source, "name", name, true);
     }
 }
 
@@ -92,10 +96,10 @@ void load_device_properties() {
     string hwname = GetProperty("ro.boot.hwname", "");
 
     if (hwname == "surya") {
-        set_device_props("Poco", "surya", "M2007J20CG");
+        set_device_props("POCO", "surya", "M2007J20CG", "surya_global");
         property_override("ro.product.mod_device", "surya_global");
     } else if (hwname == "karna") {
-        set_device_props("Poco", "karna", "M2007J20CI");
+        set_device_props("POCO", "karna", "M2007J20CI", "karna_in");
         property_override("ro.product.mod_device", "surya_in_global");
     }
 }
