@@ -24,8 +24,4 @@
     -->
     <integer name="config_fingerprintSensorLocation">3</integer>
 
-    <!-- Whether to show Smooth Display feature in Settings Options -->
-    <bool name="config_show_smooth_display">true</bool>
-    <string name="peak_refresh_rate_summary">Automatically raises the refresh rate from 60 to 120 Hz for some content. Increases battery usage.</string>
-
 </resources>
