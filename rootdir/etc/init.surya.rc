@@ -37,3 +37,17 @@ service mi_thermald /vendor/bin/mi_thermald
     class core
     user root
     group system
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    override
+    class hal
+    user nfc
+    group nfc
+    writepid /dev/cpuset/system-background/tasks
+    disabled
+
+on property:ro.boot.hwname=*
+    setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
+
+on property:ro.boot.product.hardware.sku=surya
+    enable vendor.nfc_hal_service
