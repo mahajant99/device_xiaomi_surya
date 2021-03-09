@@ -459,6 +459,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
+
 # WiFi Display
 PRODUCT_PACKAGES += \
     libavservices_minijail_32 \
