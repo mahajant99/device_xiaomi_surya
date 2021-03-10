@@ -231,17 +231,13 @@
     <!-- RT Proxy Cal end -->
 
     <!-- Incall Recording -->
-    <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="0" />
-    <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="0" />
+    <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="0" />
+    <ctl name="MultiMedia9 Mixer VOC_REC_DL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="0" />
     <!-- Incall Recording End -->
 
     <!-- Incall Music -->
-    <!-- Add by flm for sos function 20200401 start -->
-    <ctl name="Incall_Music_2 Audio Mixer MultiMedia2" value="0" />
-    <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="0" />
-    <!-- Add by flm for sos function 20200401 end -->
     <ctl name="Incall_Music Audio Mixer MultiMedia2" value="0" />
     <ctl name="Incall_Music Audio Mixer MultiMedia9" value="0" />
     <!-- Incall Music End -->
@@ -451,6 +447,10 @@
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="gsm-mode">
         <ctl name="GSM mode Enable" value="ON" />
+    </path>
+
+    <path name="tas-iv-capture">
+        <ctl name="TERT_MI2S_TX Channels" value="Two" />
     </path>
 
     <path name="echo-reference">
@@ -1748,10 +1748,6 @@
       <ctl name="MultiMedia8 Mixer SLIM_8_TX" value="1" />
     </path>
 
-    <path name="fm-virtual-record">
-        <ctl name="MultiMedia2 Mixer SLIM_8_TX" value="1" />
-    </path>
-
     <path name="fm-virtual-record capture-fm">
         <ctl name="MultiMedia2 Mixer SLIM_8_TX" value="1" />
     </path>
@@ -1773,7 +1769,7 @@
     </path>
 
     <path name="incall-rec-uplink">
-        <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="1" />
+        <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="1" />
     </path>
 
     <path name="incall-rec-uplink bt-sco">
@@ -1813,7 +1809,7 @@
     </path>
 
     <path name="incall-rec-downlink">
-        <ctl name="MultiMedia1 Mixer VOC_REC_DL"  value="1" />
+        <ctl name="MultiMedia9 Mixer VOC_REC_DL"  value="1" />
     </path>
 
     <path name="incall-rec-downlink bt-sco">
@@ -2328,11 +2324,11 @@
     </path>
 
     <path name="mmap-playback handset">
-        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia16" value="1" />
+        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
     <path name="mmap-playback speaker">
-        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia16" value="1" />
+        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
 
     <path name="mmap-playback headphones">
@@ -2543,103 +2539,6 @@
     <path name="incall_music_uplink afe-proxy">
         <path name="incall_music_uplink" />
     </path>
-
-<!--Add by flm for sos function 20200401 start-->
- <path name="incall_music_uplink2">
-        <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="1" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 handset">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 handset-hac">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 display-port">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 bt-sco">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 bt-sco-wb">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-and-display-port">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-safe-and-display-port">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 afe-proxy">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 usb-headphones">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 usb-headset">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-and-usb-headphones">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-safe-and-usb-headphones">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 headphones">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-and-headphones">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-safe-and-headphones">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-and-bt-sco">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-safe-and-bt-sco">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 voice-tty-hco-handset">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-and-bt-a2dp">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 speaker-safe-and-bt-a2dp">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 bt-a2dp">
-        <path name="incall_music_uplink2" />
-    </path>
-    <path name="incall_music_uplink2 afe-proxy">
-        <path name="incall_music_uplink2" />
-    </path>
-<!--Add by flm for sos function 20200401 end-->
 
    <path name="spkr-rx-calib">
         <ctl name="TERT_MI2S_RX_DL_HL Switch"  value="1" />
@@ -2866,11 +2765,11 @@
      <!--   <path name="amic1" />-->
         <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
 	<ctl name="TX DEC0 MUX" value="SWR_MIC" />
-	<ctl name="TX SMIC MUX0" value="ADC2" />
+	<ctl name="TX SMIC MUX0" value="ADC0" />
 	<ctl name="TX_AIF1_CAP Mixer DEC0" value="1" />
 	<ctl name="ADC1_MIXER Switch" value="1" />
 	<ctl name="TX DEC1 MUX" value="SWR_MIC" />
-	<ctl name="TX SMIC MUX1" value="ADC0" />
+	<ctl name="TX SMIC MUX1" value="ADC2" />
 	<ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
 	<ctl name="ADC2_MIXER Switch" value="1" />
 	<ctl name="ADC2 MUX" value="INP3" />
@@ -2954,7 +2853,7 @@
 
     <path name="headset-mic">
         <path name="amic2" />
-	<ctl name="ADC2 Volume" value="12" />
+	<ctl name="ADC2 Volume" value="6" />
     </path>
 
     <path name="voice-handset">
@@ -3146,8 +3045,6 @@
     </path>
 
     <path name="voice-speaker-dmic-ef">
-        <ctl name="ADC1 Volume" value="6" />
-	<ctl name="ADC2 Volume" value="6" />
         <path name="speaker-stereo-dmic-ef" />
     </path>
 

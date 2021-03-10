@@ -17,10 +17,6 @@ $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# Camera
-PRODUCT_PACKAGES += \
-    libcomparetf2
-
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -43,7 +39,6 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/bin/init.qcom.sensors.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sensors.sh \
     $(LOCAL_PATH)/rootdir/etc/init.surya.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.rc
 
 # IR
@@ -90,6 +85,10 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29

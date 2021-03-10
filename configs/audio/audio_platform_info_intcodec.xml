@@ -65,6 +65,9 @@
         <usecase name="USECASE_AUDIO_RECORD_VOIP" type="in" id="16" />
         <usecase name="USECASE_AUDIO_A2DP_ABR_FEEDBACK" type="in" id="12" />
         <usecase name="USECASE_INCALL_MUSIC_UPLINK" type="out" id="27" />
+        <usecase name="USECASE_INCALL_REC_UPLINK" type="in" id="27" />
+        <usecase name="USECASE_INCALL_REC_DOWNLINK" type="in" id="27" />
+        <usecase name="USECASE_INCALL_REC_UPLINK_AND_DOWNLINK" type="in" id="27" />
     </pcm_ids>
     <config_params>
         <!-- In the below value string, the value indicates default mono -->
@@ -74,7 +77,7 @@
         <param key="spkr_2_tz_name" value="wsatz.14"/>
         <param key="true_32_bit" value="true"/>
         <param key="hifi_filter" value="false"/>
-        <param key="native_audio_mode" value="true"/>
+        <param key="native_audio_mode" value="multiple_mix_dsp"/>
         <param key="hfp_pcm_dev_id" value="39"/>
         <param key="input_mic_max_count" value="4"/>
     </config_params>
@@ -117,6 +120,7 @@
         <device name="SND_DEVICE_OUT_USB_HEADPHONES" acdb_id="10012"/>
         <device name="SND_DEVICE_OUT_HEADPHONES_CE" acdb_id="10012"/>
         <device name="SND_DEVICE_OUT_HEADPHONES_NO_CE" acdb_id="10012"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_HEADSET_MIC_CTS" acdb_id="10032"/>
     </acdb_ids>
     <backend_names>
         <device name="SND_DEVICE_OUT_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
@@ -198,6 +202,7 @@
         <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC" interface="TX_CDC_DMA_TX_3"/>
 	<device name="SND_DEVICE_IN_VOICE_REC_HEADSET_MIC" interface="TX_CDC_DMA_TX_3"/>
+        <device name="SND_DEVICE_IN_VOICE_REC_HEADSET_MIC_CTS" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" interface="TX_CDC_DMA_TX_3"/>

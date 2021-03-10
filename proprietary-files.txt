@@ -1,4 +1,4 @@
-# Device proprietary files - from karna MIUI V12.0.9.0.QJGINXM, unless pinned
+# Device proprietary files - from surya MIUI V12.0.6.0.RJGEUXM, unless pinned
 
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
@@ -34,7 +34,6 @@ vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
-vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libqcompostprocbundle.so
 vendor/lib/soundfx/libqcomvisualizer.so
@@ -59,7 +58,6 @@ vendor/lib64/libqtigef.so
 vendor/lib64/libsndmonitor.so
 vendor/lib64/libspkrprot.so
 vendor/lib64/libssrec.so
-vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
 vendor/lib64/soundfx/libqcomvoiceprocessing.so
@@ -109,8 +107,10 @@ vendor/lib64/libarcsoft_preview_deflicker.so
 vendor/lib64/libarcsoft_supernight.so
 vendor/lib64/libbeauty_face_interface.so
 vendor/lib64/libc++_shared.so
+vendor/lib64/libcamera_dirty.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamera_scene.so
+vendor/lib64/libcamxfdalgov7.so
 vendor/lib64/libcamxfdalgov8.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxstatscore.so
@@ -118,7 +118,7 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/lib_denoiser3.so
-vendor/lib64/libdng_sdkvendor.so
+vendor/lib64/libdng_sdk2vendor.so
 vendor/lib64/libFaceGrade.so
 vendor/lib64/libft2vendor.so
 vendor/lib64/libHalSuperSensorServer.so
@@ -259,6 +259,7 @@ vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin
 vendor/etc/camera/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/etc/camera/male_bg.png
 vendor/etc/camera/male_icon.png
+vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/Miui-Light.ttf
 vendor/etc/camera/MIUI_Time.ttf
 vendor/etc/camera/model_back.dlc
@@ -359,21 +360,30 @@ vendor/firmware/ipa_fws.mdt
 # IR
 vendor/lib64/hw/consumerir.default.so
 
-# NFC
-vendor/lib/libsn100u_fw.so
+# NFC - from karna MIUI V12.0.9.0.QJGINXM
+vendor/lib/libsn100u_fw.so|124f4aa66812207146be38980a1e219aa25034bb
 
 # Sensors
+vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
+vendor/etc/init/init.vendor.sensors.rc
+vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/sensors/hals.conf
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsnsapi.so
+vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libsns_registry_skel.so
+vendor/lib64/libssc_default_listener.so
 vendor/lib64/libssc.so
 vendor/lib64/sensors.ssc.so
 
 # Sensors config
+vendor/etc/sensors/config/adux1050_0.json
+vendor/etc/sensors/config/bmi160_0.json
+vendor/etc/sensors/config/lsm6ds3c_0.json
 vendor/etc/sensors/config/sm7150_adux1050_0.json
 vendor/etc/sensors/config/sm7150_ak0991_0.json
 vendor/etc/sensors/config/sm7150_bmi220_0.json
@@ -390,6 +400,7 @@ vendor/etc/sensors/config/sns_basic_gestures.json
 vendor/etc/sensors/config/sns_bring_to_ear.json
 vendor/etc/sensors/config/sns_ccd.json
 vendor/etc/sensors/config/sns_ccd_v2_walk.json
+vendor/etc/sensors/config/sns_ccd_v3_1_walk.json
 vendor/etc/sensors/config/sns_ccd_v3_walk.json
 vendor/etc/sensors/config/sns_cm.json
 vendor/etc/sensors/config/sns_dae.json
@@ -399,6 +410,7 @@ vendor/etc/sensors/config/sns_distance_bound.json
 vendor/etc/sensors/config/sns_dpc.json
 vendor/etc/sensors/config/sns_facing.json
 vendor/etc/sensors/config/sns_fmv.json
+vendor/etc/sensors/config/sns_fmv_legacy.json
 vendor/etc/sensors/config/sns_geomag_rv.json
 vendor/etc/sensors/config/sns_gyro_cal.json
 vendor/etc/sensors/config/sns_heart_rate.json
@@ -406,7 +418,6 @@ vendor/etc/sensors/config/sns_mag_cal.json
 vendor/etc/sensors/config/sns_mag_cal_legacy.json
 vendor/etc/sensors/config/sns_multishake.json
 vendor/etc/sensors/config/sns_pedometer.json
-vendor/etc/sensors/config/sns_pickup.json
 vendor/etc/sensors/config/sns_rmd.json
 vendor/etc/sensors/config/sns_rotv.json
 vendor/etc/sensors/config/sns_smd.json
@@ -414,7 +425,96 @@ vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_tilt_to_wake.json
+vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/sns_reg_config
+
+# Sensors proto
+vendor/etc/sensors/proto/descriptor.proto
+vendor/etc/sensors/proto/nanopb.proto
+vendor/etc/sensors/proto/qti_gravity.proto
+vendor/etc/sensors/proto/sns_accel_cal.proto
+vendor/etc/sensors/proto/sns_accel.proto
+vendor/etc/sensors/proto/sns_activity_recognition.proto
+vendor/etc/sensors/proto/sns_ambient_light.proto
+vendor/etc/sensors/proto/sns_ambient_temperature.proto
+vendor/etc/sensors/proto/sns_amd.proto
+vendor/etc/sensors/proto/sns_aont.proto
+vendor/etc/sensors/proto/sns_async_com_port.proto
+vendor/etc/sensors/proto/sns_basic_gestures.proto
+vendor/etc/sensors/proto/sns_bring_to_ear.proto
+vendor/etc/sensors/proto/sns_busrw.proto
+vendor/etc/sensors/proto/sns_cal.proto
+vendor/etc/sensors/proto/sns_ccd_ttw.proto
+vendor/etc/sensors/proto/sns_ccd_walk.proto
+vendor/etc/sensors/proto/sns_client.proto
+vendor/etc/sensors/proto/sns_cmc.proto
+vendor/etc/sensors/proto/sns_cmd.proto
+vendor/etc/sensors/proto/sns_dae.proto
+vendor/etc/sensors/proto/sns_data_acquisition_engine.proto
+vendor/etc/sensors/proto/sns_da_test.proto
+vendor/etc/sensors/proto/sns_device_mode.proto
+vendor/etc/sensors/proto/sns_device_orient.proto
+vendor/etc/sensors/proto/sns_diag.proto
+vendor/etc/sensors/proto/sns_diag_sensor.proto
+vendor/etc/sensors/proto/sns_distance_bound.proto
+vendor/etc/sensors/proto/sns_dpc.proto
+vendor/etc/sensors/proto/sns_ext_svc.proto
+vendor/etc/sensors/proto/sns_facing.proto
+vendor/etc/sensors/proto/sns_fmv.proto
+vendor/etc/sensors/proto/sns_formatter.proto
+vendor/etc/sensors/proto/sns_fw.proto
+vendor/etc/sensors/proto/sns_game_rv.proto
+vendor/etc/sensors/proto/sns_geomag_rv.proto
+vendor/etc/sensors/proto/sns_gravity.proto
+vendor/etc/sensors/proto/sns_gyro_cal.proto
+vendor/etc/sensors/proto/sns_gyro.proto
+vendor/etc/sensors/proto/sns_gyro_rot_matrix.proto
+vendor/etc/sensors/proto/sns_hall.proto
+vendor/etc/sensors/proto/sns_heart_beat.proto
+vendor/etc/sensors/proto/sns_heart_rate.proto
+vendor/etc/sensors/proto/sns_hinge_angle.proto
+vendor/etc/sensors/proto/sns_humidity.proto
+vendor/etc/sensors/proto/sns_interrupt.proto
+vendor/etc/sensors/proto/sns_mag_cal.proto
+vendor/etc/sensors/proto/sns_mag.proto
+vendor/etc/sensors/proto/sns_mcmd.proto
+vendor/etc/sensors/proto/sns_motion_detect.proto
+vendor/etc/sensors/proto/sns_multishake.proto
+vendor/etc/sensors/proto/sns_oem1.proto
+vendor/etc/sensors/proto/sns_offbody_detect.proto
+vendor/etc/sensors/proto/sns_pedometer.proto
+vendor/etc/sensors/proto/sns_pedometer_wrist.proto
+vendor/etc/sensors/proto/sns_physical_sensor_test.proto
+vendor/etc/sensors/proto/sns_pose_6dof.proto
+vendor/etc/sensors/proto/sns_ppg.proto
+vendor/etc/sensors/proto/sns_pressure.proto
+vendor/etc/sensors/proto/sns_proximity.proto
+vendor/etc/sensors/proto/sns_psmd.proto
+vendor/etc/sensors/proto/sns_registry.proto
+vendor/etc/sensors/proto/sns_remote_proc_state.proto
+vendor/etc/sensors/proto/sns_resampler.proto
+vendor/etc/sensors/proto/sns_rgb.proto
+vendor/etc/sensors/proto/sns_rmd.proto
+vendor/etc/sensors/proto/sns_rotv.proto
+vendor/etc/sensors/proto/sns_sar.proto
+vendor/etc/sensors/proto/sns_sensor_temperature.proto
+vendor/etc/sensors/proto/sns_sig_motion.proto
+vendor/etc/sensors/proto/sns_signal_sensor.proto
+vendor/etc/sensors/proto/sns_sim_legacy.proto
+vendor/etc/sensors/proto/sns_sim.proto
+vendor/etc/sensors/proto/sns_std_event_gated_sensor.proto
+vendor/etc/sensors/proto/sns_std.proto
+vendor/etc/sensors/proto/sns_std_sensor.proto
+vendor/etc/sensors/proto/sns_std_type.proto
+vendor/etc/sensors/proto/sns_step_detect.proto
+vendor/etc/sensors/proto/sns_suid.proto
+vendor/etc/sensors/proto/sns_thermopile.proto
+vendor/etc/sensors/proto/sns_threshold.proto
+vendor/etc/sensors/proto/sns_tilt.proto
+vendor/etc/sensors/proto/sns_tilt_to_wake.proto
+vendor/etc/sensors/proto/sns_timer.proto
+vendor/etc/sensors/proto/sns_ultra_violet.proto
+vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 
 # Thermal
 vendor/bin/mi_thermald
@@ -431,6 +531,7 @@ vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermald-devices.conf
 vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalfeature.so
 
 # Touchscreen firmware
 vendor/firmware/novatek_ts_huaxing_fw.bin
