@@ -12,6 +12,10 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
             "${PATCHELF}" --remove-needed "libmegface.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_megvii.so" "${2}"
+            "${PATCHELF}" --add-needed "libcomparetf2.so" "${2}"
+            ;;
+        vendor/lib64/libvidhance.so|vendor/lib64/camera/components/com.vidhance.node.eis.so)
+            "${PATCHELF}" --add-needed "libcomparetf2.so" "${2}"
             ;;
         vendor/etc/qdcm*)
            sed -i '0,/smart_MC/s//zsmart_MC/' "${2}"
