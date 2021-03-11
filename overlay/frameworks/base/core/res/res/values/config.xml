@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+)<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2009 The Android Open Source Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -278,11 +278,8 @@
         <item>/system/lib64/libblas.so</item>
     </string-array>
 
-    <!-- Should the pinner service pin the Camera application? -->
-    <bool name="config_pinnerCameraApp">true</bool>
-
     <!-- Should the pinner service pin the Home application? -->
-    <bool name="config_pinnerHomeApp">true</bool>
+    <bool name="config_pinnerHomeApp">false</bool>
 
     <!-- List of files pinned by the Pinner Service with the JIT Zygote boot image b/119800099 -->
     <string-array translatable="false" name="config_jitzygoteBootImagePinnerServiceFiles">
