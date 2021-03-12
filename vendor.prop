@@ -1,4 +1,5 @@
 # Audio
+persist.vendor.audio.voicecall.speaker.stereo=true
 vendor.audio.adm.buffering.ms=2
 vendor.audio.feature.compr_voip.enable=false
 vendor.voice.path.for.pcm.voip=true
