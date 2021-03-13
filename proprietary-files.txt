@@ -318,6 +318,9 @@ vendor/lib64/camera/com.qti.tuned.j20c_sunny_s5k3t2_front_india.bin|22123f00b0a7
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
 
+# Camera service
+lib/libcameraservice.so
+
 # Display calibration
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
