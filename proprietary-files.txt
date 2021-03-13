@@ -327,6 +327,18 @@ vendor/etc/sdr_config.cfg
 vendor/etc/qdcm_calib_data_nt36672c_huaxing_fhd_video_mode_dsi_panel.xml
 vendor/etc/qdcm_calib_data_nt36672c_tianma_fhd_video_mode_dsi_panel.xml
 
+# DRM - Widevine L1 - from karna MIUI V12.0.9.0.QJGINXM
+vendor/lib64/liboemcrypto.so|4bc85a74d947a1da5c4fcbe164bf06c36b264c2a
+modem/image/widevine.b00:vendor/firmware/widevine.b00|ede80cfa888375dd55fa086ef9b2987ecd646585
+modem/image/widevine.b01:vendor/firmware/widevine.b01|fef7522848eb33171eedd87755ea5c276bacebd0
+modem/image/widevine.b02:vendor/firmware/widevine.b02|53dcdaad8823e42cb11bcf40a9ad68c3999179e8
+modem/image/widevine.b03:vendor/firmware/widevine.b03|b6f45c28c64420722219a39673dfd98a76df1909
+modem/image/widevine.b04:vendor/firmware/widevine.b04|a010220bbc350cf36f2cd733afc07c7d4dc0921f
+modem/image/widevine.b05:vendor/firmware/widevine.b05|be33cd6286083067250bf79f86cc91ec78b5d056
+modem/image/widevine.b06:vendor/firmware/widevine.b06|e54a8628aae9253a1a38e485ab0bcb1031ff8c01
+modem/image/widevine.b07:vendor/firmware/widevine.b07|fb7d01a97ff4d54e6bb5a9a2e48a15a239d2edcd
+modem/image/widevine.mdt:vendor/firmware/widevine.mdt|a315637df4495054bc564e7402bd5a136fd03e31
+
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
