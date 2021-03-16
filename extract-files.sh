@@ -9,9 +9,6 @@
 function blob_fixup() {
     case "${1}" in
         vendor/lib64/hw/camera.qcom.so)
-            "${PATCHELF}" --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
-            "${PATCHELF}" --remove-needed "libmegface.so" "${2}"
-            "${PATCHELF}" --add-needed "libshim_megvii.so" "${2}"
             "${PATCHELF}" --add-needed "libcomparetf2.so" "${2}"
             sed -i 's/libsnsapi/libhaxapi/g' "${2}"
             ;;

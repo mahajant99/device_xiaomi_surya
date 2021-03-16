@@ -84,7 +84,7 @@ vendor/lib64/hw/audio.primary.sm6150.so
 vendor/lib64/libaudio_log_utils.so
 
 # Camera - from karna MIUI V12.0.9.0.QJGINXM
-vendor/lib64/hw/camera.qcom.so|71f962714d404a293110ceac319bcfdb7b93ce57
+vendor/lib64/hw/camera.qcom.so|7ebdb54ea28e4bece374739fd8082d0ce342cb8f
 vendor/lib64/hw/com.qti.chi.override.so|92e18bbd00964acc023749b2dbe5d2e2629d275c
 vendor/lib64/libalAILDC.so|954787c3ea262b3a75e50e25fa31f1d6b7a86559
 vendor/lib64/libalCFR.so|7c8eb7bdd3c2bb055251afe67f8908a2c76a7ab3
@@ -123,6 +123,8 @@ vendor/lib64/libFaceGrade.so|c0cbe46c17f646152d8aa5fac6e8d7f9bbe37a26
 vendor/lib64/libft2vendor.so|4d45afbf3dadf5419f90f1b5d3ff5d6be2038e64
 vendor/lib64/libHalSuperSensorServer.so|fcd7bba35f1f3c8285b074d79d00cc2633f4624e
 vendor/lib64/libhvx_interface.so|e183fcca164ae4003339a2767dd972e8b1d1a0ed
+vendor/lib64/libmegface.so|03f4dbaed7096307a42e1a0f451c0fd9cb2adc34
+vendor/lib64/libMegviiFacepp-0.5.2.so|cc8ccb3583f2d6d80c52fabef9f577caf9059dd0
 vendor/lib64/libmiai_portraitsupernight.so|3f25fa8e96c8ba580ea452c2a8470402c79474ee
 vendor/lib64/libmiai_supernight.so|19ce37a203f3587e73a131b5bd358cd6d0f60903
 vendor/lib64/libmialgo_basic.so|b4d9e6ed6fa86d382c4a8a253ab1303144dfc2df
@@ -241,6 +243,7 @@ vendor/etc/camera/almalence_sr_params_tele.config|a5216343ebac981b47670522cf0a56
 vendor/etc/camera/almalence_sr_params_wide.config|9567cf89e5347348ea5e10035c3f2635b9fd8162
 vendor/etc/camera/beauty_ui9_intelligent_params.config|d8033821ed88f91aa7f7c666246e3a8e40615782
 vendor/etc/camera/body_slim_ui9_params.config|6a341b766aa06b6f8496fd96c440ea27a023eb0b
+vendor/etc/camera/megviifacepp_0_5_2_model|a2b8751f04d94f0634453c40426e66b0a1283da1
 vendor/etc/camera/camxoverridesettings.txt|409c46f8fd8b56f922d85ccc903bf9e4594f1325
 vendor/etc/camera/CFR_para_M_V07.bin|07f1b026e7696d4df0a7e8ee423b7d921b4009a5
 vendor/etc/camera/CFR_para_M_V10.bin|e9d7252dd635ba28508ed7ad4c57b497269e6fd3
