@@ -83,6 +83,10 @@ vendor/lib/libaudio_log_utils.so
 vendor/lib64/hw/audio.primary.sm6150.so
 vendor/lib64/libaudio_log_utils.so
 
+# Batterysecret
+vendor/bin/batterysecret 
+vendor/etc/init/init.batterysecret.rc 
+
 # Camera - from karna MIUI V12.0.9.0.QJGINXM
 vendor/lib64/hw/camera.qcom.so|7ebdb54ea28e4bece374739fd8082d0ce342cb8f
 vendor/lib64/hw/com.qti.chi.override.so|92e18bbd00964acc023749b2dbe5d2e2629d275c
