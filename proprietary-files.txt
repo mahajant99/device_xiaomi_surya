@@ -379,8 +379,8 @@ vendor/firmware/ipa_fws.mdt
 # IR
 vendor/lib64/hw/consumerir.default.so
 
-# NFC - from karna MIUI V12.0.9.0.QJGINXM
-vendor/lib/libsn100u_fw.so|124f4aa66812207146be38980a1e219aa25034bb
+# NFC
+vendor/lib/libpn553_fw.so
 
 # Sensors
 vendor/bin/init.qcom.sensors.sh
