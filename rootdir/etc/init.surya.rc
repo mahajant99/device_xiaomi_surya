@@ -10,6 +10,9 @@ on init
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
 
+    chown system system /proc/tp_gesture
+    chmod 0644 /proc/tp_gesture
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
