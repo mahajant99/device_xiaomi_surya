@@ -347,8 +347,6 @@ modem/image/widevine.b07:vendor/firmware/widevine.b07|fb7d01a97ff4d54e6bb5a9a2e4
 modem/image/widevine.mdt:vendor/firmware/widevine.mdt|a315637df4495054bc564e7402bd5a136fd03e31
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/com.fingerprints.extension@1.0.so
