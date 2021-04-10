@@ -92,7 +92,7 @@ vendor/bin/batterysecret
 vendor/etc/init/init.batterysecret.rc 
 
 # Camera - from karna MIUI V12.0.9.0.QJGINXM
-vendor/lib64/hw/camera.qcom.so|7ebdb54ea28e4bece374739fd8082d0ce342cb8f
+vendor/lib64/hw/camera.qcom.so|c234afaeaa6ce6022b57bca4dcf2abc426925de3|7ebdb54ea28e4bece374739fd8082d0ce342cb8f
 vendor/lib64/hw/com.qti.chi.override.so|92e18bbd00964acc023749b2dbe5d2e2629d275c
 vendor/lib64/libalAILDC.so|954787c3ea262b3a75e50e25fa31f1d6b7a86559
 vendor/lib64/libalCFR.so|7c8eb7bdd3c2bb055251afe67f8908a2c76a7ab3
@@ -116,7 +116,7 @@ vendor/lib64/libarcsoft_supernight.so|2e591c76cc7a18561a06b1d8b98f3fa68b1ea4e3
 vendor/lib64/libbeauty_face_interface.so|b473dbf0adc0857a361506274485b38034a27189
 vendor/lib64/libc++_shared.so|e7beb423bbab65c498e752fd11c7becc2b02170f
 vendor/lib64/libcamera_dirty.so|61b5f04aea76d55c504e395999591f0034e22162
-vendor/lib64/libcamera_nn_stub.so|35e50af5d09e4b7d4369ccb777fb942ff083c837
+vendor/lib64/libcamera_nn_stub.so|e0c6abd0b2143e7ad6728b234cee7b9c68bf2734|35e50af5d09e4b7d4369ccb777fb942ff083c837
 vendor/lib64/libcamera_scene.so|51c36d3eb31a4a2ed939e7f6eccde343ac5bfe66
 vendor/lib64/libcamxfdalgov7.so|937cf18bdcf83a172dda1ecd7218a4ceac4ca316
 vendor/lib64/libcamxfdalgov8.so|50a94995ef4aa5c27a46a7265843baa4a6d64e69
@@ -147,7 +147,7 @@ vendor/lib64/libmpbase.so|de06122c5569245365a66b45ab914e9bcb333c82
 vendor/lib64/libremosaiclib.so|556596c0f99372505c532c14c0d4910dca42a405
 vendor/lib64/libremosaic_wrapper.so|45e603d79c2b426de4b72cca28b70869fc6f34dd
 vendor/lib64/libsdk_sr.so|9b24597abff9f7d946330d2eb8fa35a8a7238829
-vendor/lib64/libsnsapi.so:vendor/lib64/libhaxapi.so|021d7cc8d5e85cfecf0b469f20e77e75bb092a72
+vendor/lib64/libsnsapi.so:vendor/lib64/libhaxapi.so|04db7051cf85e08de02d7259bf79b63b3f22d5de|021d7cc8d5e85cfecf0b469f20e77e75bb092a72
 vendor/lib64/libst_sr_models.so|caf586952b1325dff5d899f89928fa35c78ad388
 vendor/lib64/libSNPE.so|1655b7995d0fb2efe6e1c1b55b08d720a9cada6c
 vendor/lib64/libSuperSensorCPU.so|f0b213708956021059b1224bcdc184312af32cfb
@@ -159,7 +159,7 @@ vendor/lib64/libtriplecam_video_optical_zoom.so|070fadc768c9b66d1a61e1cf0c55d4f9
 vendor/lib64/libVDClearShot.so|bc0ff458b3dfb812ec41c897db9369faa077c8a3
 vendor/lib64/libVDSuperPhotoAPI.so|c20d02759c3693f49df6f1ee79007215301651a6
 vendor/lib64/libvideofilter_only.so|31e4da0dd7efd971106cc4f33106bf92e564f1c0
-vendor/lib64/libvidhance.so|347063939485476d68e11e01c7c14a317f1cbf2a
+vendor/lib64/libvidhance.so|2e5d10f6b3f8b01c1802a4c60b5c5b933f162b1e|347063939485476d68e11e01c7c14a317f1cbf2a
 vendor/lib64/libXMFD_AgeGender.so|1db22d1fdb244072129b3dda02b276128a980fd2
 vendor/lib64/libxmi_high_dynamic_range.so|091b4bf66df7128f7768693ff1e48164d4300867
 vendor/lib64/libxml2_vendor.so|1aa040669f47648d94bf6c0fd556ce74662f919e
@@ -182,7 +182,7 @@ vendor/lib64/camera/components/com.arcsoft.node.superlowlight.so|106c6ddaaf03216
 vendor/lib64/camera/components/com.miai.node.portraitsupernight.so|a4885c065325e6d93d54d5320dbd5f1bbf16e15b
 vendor/lib64/camera/components/com.miai.node.supernight.so|f555103d6a898e7f809716af844e246581dbbb12
 vendor/lib64/camera/components/com.mi.node.aiasd.so|9c6eb065d34e9c45e6ea67ee2e0170672cb821fe
-vendor/lib64/camera/components/com.qti.camx.chiiqutils.so|bd6e5c2b5091456680150b6f79275adfd17b9226
+vendor/lib64/camera/components/com.qti.camx.chiiqutils.so|c7c54500f4eb1f3989da2c628722f74df2b9a314|bd6e5c2b5091456680150b6f79275adfd17b9226
 vendor/lib64/camera/components/com.qti.eisv2.so|9ee6b1cb3b96eef92ab575bad2816fe91fac1255
 vendor/lib64/camera/components/com.qti.eisv3.so|214e03a899cf292aeba2ea5c4e29c48e0e88898b
 vendor/lib64/camera/components/com.qti.hvx.addconstant.so|ebb05ac218711d8bb7909d990a313558990afed5
@@ -191,8 +191,8 @@ vendor/lib64/camera/components/com.qti.node.depth.so|c47012e6a4a6408f78a03b922a1
 vendor/lib64/camera/components/com.qti.node.dewarp.so|9dd6491d0d1f31585aa1f48f824fcee8c6f2b6cb
 vendor/lib64/camera/components/com.qti.node.dummyrtb.so|352384c5f4880fde5d8befdcf0fcdc789d6f8775
 vendor/lib64/camera/components/com.qti.node.dummysat.so|e4b97a854206dc4e9e61ae719c5c3f73ee3b6381
-vendor/lib64/camera/components/com.qti.node.eisv2.so|fcbd8360e32aebed6594708008307f3879482fa4
-vendor/lib64/camera/components/com.qti.node.eisv3.so|a881784205d7c4005363458762a020d1ec34bd76
+vendor/lib64/camera/components/com.qti.node.eisv2.so|2b7f00db63a81b42589c4772abfa64676fd277f5|fcbd8360e32aebed6594708008307f3879482fa4
+vendor/lib64/camera/components/com.qti.node.eisv3.so|df893d32c48795ce9d42ea943fd8e2e3b1af6dd3|a881784205d7c4005363458762a020d1ec34bd76
 vendor/lib64/camera/components/com.qti.node.fcv.so|c401c45b4a423199119c1ffefaa325077120bd40
 vendor/lib64/camera/components/com.qti.node.gpu.so|cdda44c6f1af0c3d23ce289f4567b1496ec30125
 vendor/lib64/camera/components/com.qti.node.memcpy.so|e64a758f023fda41a6c6edd0bfa7c009a07113ce
@@ -221,7 +221,7 @@ vendor/lib64/camera/components/com.qti.stats.pdlib.so|e0f07248192e93c5498bfd43e4
 vendor/lib64/camera/components/com.qti.stats.pdlibsony.so|e484661eecfdf56bfb133abcc18d58162bec0b32
 vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so|c070e3fa8ffdf83d4c294bfde6b0ed0122c806fd
 vendor/lib64/camera/components/com.st.node.sr.so|3c0a37e9bae9cdde786465c69f48c5ab605b3d4f
-vendor/lib64/camera/components/com.vidhance.node.eis.so|70b3bdb0d4734ac8c91c4176bd258dccb12bdc1f
+vendor/lib64/camera/components/com.vidhance.node.eis.so|5a6b2c82acf8b43fe1aa404f1bf91c5dfe6fd519|70b3bdb0d4734ac8c91c4176bd258dccb12bdc1f
 vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so|75da96e9830bec4672d6adc77282292186d2e4ab
 vendor/lib64/camera/components/com.visidon.node.clearshot.so|e402625f51a694cf79dc38221d6e6143d5ac6fbb
 vendor/lib64/camera/components/com.visidon.node.sr.so|9b768a2a9bb938f662c7d3655a55085f5fa7b9e1
@@ -232,7 +232,7 @@ vendor/lib64/camera/components/com.xiaomi.node.mimovie.so|c4c0223186419bce6b3bd5
 vendor/lib64/camera/components/com.xiaomi.node.misegment.so|51ea57ee9eacf6dd3bde7c9d59265988b13bc585
 vendor/lib64/camera/components/etc/visidon_clearshot_params.xml|ee064b324f3e4369a2d081b774076d2b71f6246a
 vendor/lib64/camera/components/libdepthmapwrapper.so|ff1a4ee13e289156a45dcc95e390fb95dba38316
-vendor/lib64/camera/components/libmmcamera_cac3.so|dbd4380ef97b420a63b534950b5a9d1e452e037b
+vendor/lib64/camera/components/libmmcamera_cac3.so|b75abe51bc2d7c98d8544f0e5a02f2812419adfc|dbd4380ef97b420a63b534950b5a9d1e452e037b
 
 # Camera configs - from karna MIUI V12.0.9.0.QJGINXM
 vendor/etc/camera/102_SummerDay.png|e27c1ad14c763cbc0159aa5a0357b934cbc16ced
