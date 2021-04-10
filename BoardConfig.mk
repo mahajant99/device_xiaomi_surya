@@ -1,10 +1,13 @@
 #
 # Copyright (C) 2021 Paranoid Android
+#           (C) 2021 WaveOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 DEVICE_PATH := device/xiaomi/surya
+
+BUILD_BROKEN_DUP_RULES := true
 
 # Inherit from sm6150-common
 include device/xiaomi/sm6150-common/BoardConfigCommon.mk
@@ -34,8 +37,10 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
 TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
 
 # Kernel
-KERNEL_DEFCONFIG := vendor/surya-perf_defconfig
+TARGET_KERNEL_CONFIG := vendor/surya-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+TARGET_KERNEL_USE_LATEST_CLANG := true
+TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
