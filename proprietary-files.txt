@@ -329,6 +329,10 @@ vendor/lib64/camera/com.qti.tuned.j20c_sunny_s5k3t2_front_india.bin|22123f00b0a7
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
 
+# Camera provider - from karna MIUI V12.0.9.0.QJGINXM
+vendor/lib/android.hardware.camera.provider@2.4-legacy.so|2a3f6198d9cedc7b06baf15a84584eaa318b4428
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|39c9ec811edac3167433159701a8b94e49253fb5
+
 # Camera service
 lib/libcameraservice.so
 
