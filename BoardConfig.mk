@@ -21,6 +21,9 @@ TARGET_OTA_ASSERT_DEVICE := surya,karna
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
+# Display
+TARGET_SCREEN_DENSITY := 420
+
 # DT2W
 TARGET_TAP_TO_WAKE_NODE  := "/proc/tp_gesture"
 
