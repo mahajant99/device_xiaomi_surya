@@ -22,9 +22,6 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed "libcomparetf2.so" "${2}"
             "${PATCHELF}" --add-needed "libc++demangle.so" "${2}"
             ;;
-        vendor/etc/qdcm*)
-           sed -i '0,/smart_MC/s//zsmart_MC/' "${2}"
-           ;;
     esac
 }
 

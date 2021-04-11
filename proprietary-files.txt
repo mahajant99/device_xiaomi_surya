@@ -339,8 +339,6 @@ lib/libcameraservice.so
 # Display calibration
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
-vendor/etc/qdcm_calib_data_nt36672c_huaxing_fhd_video_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_nt36672c_tianma_fhd_video_mode_dsi_panel.xml
 
 # DRM - Widevine L1 - from karna MIUI V12.0.9.0.QJGINXM
 vendor/lib64/liboemcrypto.so|4bc85a74d947a1da5c4fcbe164bf06c36b264c2a
