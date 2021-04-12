@@ -1,0 +1,1 @@
+require version-baseband=4.4.c6-00013,V12.0.6.0.RJGEUXM
