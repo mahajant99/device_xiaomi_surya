@@ -681,3 +681,6 @@ vendor/firmware/vehicle_moto_RTP.bin
 vendor/firmware/vehicle_plane_RTP.bin
 vendor/firmware/Vigor_RTP.bin
 vendor/firmware/WindChime_RTP.bin
+
+# WLAN
+vendor/bin/cnss-daemon
