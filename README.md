@@ -1,4 +1,4 @@
-# Unified Device Tree for Xiaomi POCO X3/X3 NFC (surya/karna)
+# Unified Device Tree for Xiaomi POCO X3/X3 NFC
 
 The POCO X3 NFC (codenamed "surya") is a mid-range smartphone from Xiaomi's sub-brand POCO. It was announced and released in September 2020.
 
