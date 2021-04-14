@@ -2,6 +2,7 @@
    Copyright (c) 2015, The Linux Foundation. All rights reserved.
    Copyright (C) 2016 The CyanogenMod Project.
    Copyright (C) 2019-2020 The LineageOS Project.
+   Copyright (C) 2021 WaveOS.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -29,17 +30,11 @@
  */
 
 #include <cstdlib>
-#include <fstream>
 #include <string.h>
-#include <sys/sysinfo.h>
-#include <unistd.h>
-#include <vector>
 
-#include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <sys/_system_properties.h>
+#include <android-base/properties.h>
 
 #include "property_service.h"
 #include "vendor_init.h"
@@ -47,22 +42,11 @@
 using android::base::GetProperty;
 using std::string;
 
-std::vector<string> ro_props_default_source_order = {
-    "",
-    "bootimage.",
-    "odm.",
-    "product.",
-    "system.",
-    "system_ext.",
-    "vendor."
-};
+void property_override(char const prop[], char const value[], bool add = true)
+{
+    auto pi = (prop_info*) __system_property_find(prop);
 
-void property_override(char const prop[], char const value[], bool add = true) {
-    prop_info *pi;
-
-    pi = (prop_info *)__system_property_find(prop);
-
-    if (pi)
+    if (pi != nullptr)
         __system_property_update(pi, value, strlen(value));
     else if (add)
         __system_property_add(prop, strlen(prop), value, strlen(value));
@@ -72,18 +56,21 @@ void set_ro_build_prop(const string &source, const string &prop,
                        const string &value, bool product = false) {
     string prop_name;
 
-    if (product) {
+    if (product)
         prop_name = "ro.product." + source + prop;
-    } else {
+    else
         prop_name = "ro." + source + "build." + prop;
-    }
 
     property_override(prop_name.c_str(), value.c_str(), false);
 }
 
 void set_device_props(const string brand, const string device,
 			const string model, const string name) {
-    for (const auto &source : ro_props_default_source_order) {
+    // list of partitions to override props
+    string source_partitions[] = { "", "bootimage", "odm.", "product.",
+                                   "system", "system_ext.", "vendor." };
+
+    for (const string &source : source_partitions) {
         set_ro_build_prop(source, "brand", brand, true);
         set_ro_build_prop(source, "device", device, true);
         set_ro_build_prop(source, "product", device, false);
@@ -92,60 +79,18 @@ void set_device_props(const string brand, const string device,
     }
 }
 
-void load_device_properties() {
-    string hwname = GetProperty("ro.boot.hwname", "");
-
-    if (hwname == "surya") {
-        set_device_props("POCO", "surya", "M2007J20CG", "surya_global");
-        property_override("ro.wave.device_name", "POCO X3 NFC");
-        property_override("ro.product.mod_device", "surya_global");
-    } else if (hwname == "karna") {
+void vendor_load_properties()
+{
+    /*
+     * Detect device and configure properties
+     */
+    if (GetProperty("ro.boot.hwname", "") == "karna") { // POCO X3 (India)
         set_device_props("POCO", "karna", "M2007J20CI", "karna_in");
         property_override("ro.wave.device_name", "POCO X3");
         property_override("ro.product.mod_device", "surya_in_global");
+    } else { // POCO X3 NFC
+        set_device_props("POCO", "surya", "M2007J20CG", "surya_global");
+        property_override("ro.wave.device_name", "POCO X3 NFC");
+        property_override("ro.product.mod_device", "surya_global");
     }
-}
-
-void load_dalvik_properties()
-{
-    struct sysinfo sys;
-    char const *heapstartsize;
-    char const *heapgrowthlimit;
-    char const *heapsize;
-    char const *heapminfree;
-    char const *heapmaxfree;
-    char const *heaptargetutilization;
-
-    sysinfo(&sys);
-
-    if (sys.totalram >= 7ull * 1024 * 1024 * 1024) {
-        // from - phone-xhdpi-8192-dalvik-heap.mk
-        heapstartsize = "24m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.46";
-        heapminfree = "8m";
-        heapmaxfree = "48m";
-    } else {
-        // from - phone-xhdpi-6144-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heaptargetutilization = "0.5";
-        heapminfree = "8m";
-        heapmaxfree = "32m";
-    }
-
-    property_override("dalvik.vm.heapstartsize", heapstartsize);
-    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_override("dalvik.vm.heapsize", heapsize);
-    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    property_override("dalvik.vm.heapminfree", heapminfree);
-    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
-}
-
-void vendor_load_properties()
-{
-    load_dalvik_properties();
-    load_device_properties();
 }
