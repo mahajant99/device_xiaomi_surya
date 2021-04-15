@@ -1,4 +1,4 @@
-# Device proprietary files - from surya MIUI V12.0.6.4.RJGEUXM, unless pinned
+# Device proprietary files - from surya MIUI V12.0.7.0.RJGEUXM, unless pinned
 
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
