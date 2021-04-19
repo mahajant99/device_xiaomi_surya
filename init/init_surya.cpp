@@ -61,7 +61,7 @@ void set_ro_build_prop(const string &source, const string &prop,
     else
         prop_name = "ro." + source + "build." + prop;
 
-    property_override(prop_name.c_str(), value.c_str(), false);
+    property_override(prop_name.c_str(), value.c_str(), true);
 }
 
 void set_device_props(const string brand, const string device,
