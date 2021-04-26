@@ -100,11 +100,6 @@ on enable-low-power
     # Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
 
-    # Set the default IRQ affinity to the silver cluster. When a
-    # CPU is isolated/hotplugged, the IRQ affinity is adjusted
-    # to one of the CPU from the default IRQ affinity mask.
-    write /proc/irq/default_smp_affinity 3f
-
     # Setting b.L scheduler parameters
     write /proc/sys/kernel/sched_downmigrate 85
     write /proc/sys/kernel/sched_upmigrate 95
