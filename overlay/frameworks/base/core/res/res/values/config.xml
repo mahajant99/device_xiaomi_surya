@@ -572,4 +572,7 @@
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>co.aospa.keyhandler.KeyHandler</item>
     </string-array>
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
 </resources>
