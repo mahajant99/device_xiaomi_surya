@@ -25,4 +25,8 @@
 
     <integer name="touch_resistant_default">2</integer>
     <integer name="touch_resistant_max">3</integer>
+
+    <!-- Haptic Feedback Levels -->
+   <integer name="haptic_level_default">80</integer>
+   <integer name="haptic_level_max">100</integer>
 </resources>
