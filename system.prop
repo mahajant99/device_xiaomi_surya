@@ -13,6 +13,10 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 # Charger
 ro.charger.enable_suspend=true
 
+# LCD features
+persist.lcd.cabc_mode=0
+persist.lcd.hbm_mode=0
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
