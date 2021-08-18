@@ -76,7 +76,7 @@
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles and Game Mode</string>
-    <string name="thermal_summary">Adjust per-app thermal and touchscreen profiles for optimum performance</string>
+    <string name="thermal_summary">Adjust per-app thermal and touchscreen profiles</string>
     <string name="thermal_default">Default</string>
     <string name="thermal_benchmark">Benchmark</string>
     <string name="thermal_camera">Camera</string>
@@ -84,9 +84,8 @@
     <string name="thermal_gaming">Gaming</string>
 
     <!-- Touch Control Settings -->
-    <string name="touch_control_title">Touch Control</string>
     <string name="touch_game_mode_title">Enable game mode</string>
-    <string name="touch_game_mode_summary">Activate manual touchscreen feature controls for a better gaming experience</string>
+    <string name="touch_game_mode_summary">Activate manual touchscreen feature controls and increase CPU and GPU performance</string>
     <string name="touch_response_title">Touch response</string>
     <string name="touch_response_summary">Control touch response</string>
     <string name="touch_sensitivity_title">Touch sensitivity</string>

@@ -17,11 +17,11 @@
 
 <resources>
     <!-- Gaming Profiles -->
-    <integer name="touch_response_default">35</integer>
-    <integer name="touch_response_max">50</integer>
+    <integer name="touch_response_default">3</integer>
+    <integer name="touch_response_max">3</integer>
 
     <integer name="touch_sensitivity_default">0</integer>
-    <integer name="touch_sensitivity_max">255</integer>
+    <integer name="touch_sensitivity_max">2</integer>
 
     <integer name="touch_resistant_default">2</integer>
     <integer name="touch_resistant_max">3</integer>
