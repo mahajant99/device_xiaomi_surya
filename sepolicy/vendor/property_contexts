@@ -9,6 +9,9 @@ persist.camera.                    u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.mi.module.   u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.              u:object_r:vendor_camera_prop:s0
 
+# Graphics
+ro.gfx.driver.1                    u:object_r:graphics_config_prop:s0
+
 # Fingerprint
 gf.debug.                          u:object_r:vendor_fp_prop:s0
 persist.sys.fp.                    u:object_r:vendor_fp_prop:s0
