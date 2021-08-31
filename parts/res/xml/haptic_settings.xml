@@ -20,6 +20,7 @@
         android:key="haptic_level_pref"
         android:title="@string/haptic_level_title"
         android:summary="@string/haptic_level_summary"
+        android:icon="@drawable/ic_phone_vibrate"
         android:layout="@layout/preference_slider"
         android:defaultValue="@integer/haptic_level_default"
         android:max="@integer/haptic_level_max" />
