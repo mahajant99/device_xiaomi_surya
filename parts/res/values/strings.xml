@@ -81,6 +81,7 @@
 
      <!-- Haptic Level Settings -->
      <string name="haptic_title">Haptic feedback</string>
+     <string name="haptic_summary">Customize vibration intensity</string>
      <string name="haptic_level_title">Level</string>
      <string name="haptic_level_summary">The amount of vibration intensity</string>
      <string name="haptic_level_summary_incompatible">Kernel did not support this feature</string>
