@@ -474,6 +474,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
+    KarnaWifiOverlay \
+    SuryaWifiOverlay \
     WifiOverlay
 
 PRODUCT_COPY_FILES += \
