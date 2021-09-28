@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2019-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "AntiFlickerService"
+#define LOG_TAG "AdaptiveBacklightService"
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
 #include <android-base/strings.h>
 
-#include "AntiFlicker.h"
+#include "AdaptiveBacklight.h"
 
 namespace vendor {
 namespace lineage {
@@ -28,21 +28,20 @@ namespace livedisplay {
 namespace V2_1 {
 namespace implementation {
 
-static constexpr const char* kAntiFlickerStatusPath =
-        "/sys/devices/platform/soc/soc:qcom,dsi-display/dc_enable";
+static constexpr const char* kCabcStatusPath = "/sys/devices/platform/soc/soc:qcom,dsi-display/cabc";
 
-Return<bool> AntiFlicker::isEnabled() {
+Return<bool> AdaptiveBacklight::isEnabled() {
     std::string buf;
-    if (!android::base::ReadFileToString(kAntiFlickerStatusPath, &buf)) {
-        LOG(ERROR) << "Failed to read " << kAntiFlickerStatusPath;
+    if (!android::base::ReadFileToString(kCabcStatusPath, &buf)) {
+        LOG(ERROR) << "Failed to read " << kCabcStatusPath;
         return false;
     }
     return std::stoi(android::base::Trim(buf)) == 1;
 }
 
-Return<bool> AntiFlicker::setEnabled(bool enabled) {
-    if (!android::base::WriteStringToFile((enabled ? "1" : "0"), kAntiFlickerStatusPath)) {
-        LOG(ERROR) << "Failed to write " << kAntiFlickerStatusPath;
+Return<bool> AdaptiveBacklight::setEnabled(bool enabled) {
+    if (!android::base::WriteStringToFile((enabled ? "1" : "0"), kCabcStatusPath)) {
+        LOG(ERROR) << "Failed to write " << kCabcStatusPath;
         return false;
     }
     return true;
