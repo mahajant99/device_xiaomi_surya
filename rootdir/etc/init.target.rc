@@ -64,6 +64,10 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 10
 
+on charger
+    chown system system /sys/class/leds/white/brightness
+    write /sys/class/leds/white/brightness 255
+
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
