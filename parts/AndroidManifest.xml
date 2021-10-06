@@ -47,7 +47,7 @@
             android:name=".dirac.DiracActivity"
             android:label="@string/dirac_title"
             android:exported="true"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -75,7 +75,7 @@
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title"
             android:exported="true"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -87,7 +87,7 @@
         <activity
             android:name=".speaker.ClearSpeakerActivity"
             android:label="@string/clear_speaker_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -100,7 +100,7 @@
             android:label="@string/thermal_title"
             android:icon="@drawable/ic_thermal_settings"
             android:exported="true"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -123,7 +123,7 @@
         <activity
             android:name=".display.LcdFeaturesPreferenceActivity"
             android:label="@string/lcd_features_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
