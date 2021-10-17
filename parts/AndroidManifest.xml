@@ -128,7 +128,7 @@
             android:name=".refreshrate.RefreshActivity"
             android:label="@string/refresh_title"
             android:exported="false"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -188,7 +188,7 @@
             android:name=".haptic.HapticLevelActivity"
             android:exported="false"
             android:label="@string/haptic_title"
-            android:theme="@style/Theme.Main">
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -212,7 +212,7 @@
 	 <activity
             android:name=".kcal.KcalSettingsActivity"
             android:exported="false"
-            android:theme="@style/Theme.Main"
+            android:theme="@style/Theme.SubSettingsBase"
             android:label="@string/advanced_settings_kcal">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
