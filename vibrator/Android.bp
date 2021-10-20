@@ -2,7 +2,7 @@ Common_CFlags = ["-Wall"]
 Common_CFlags += ["-Werror"]
 
 cc_library_shared {
-    name: "vendor.qti.hardware.vibrator.impl.xiaomi_sm6150",
+    name: "vendor.qti.hardware.vibrator.impl.surya",
     stem: "vendor.qti.hardware.vibrator.impl",
     vendor: true,
     cflags: Common_CFlags,
@@ -21,7 +21,7 @@ cc_library_shared {
 }
 
 cc_binary {
-    name: "vendor.qti.hardware.vibrator.service.xiaomi_sm6150",
+    name: "vendor.qti.hardware.vibrator.service.surya",
     stem: "vendor.qti.hardware.vibrator.service",
     vendor: true,
     relative_install_path: "hw",

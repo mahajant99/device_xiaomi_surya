@@ -1,0 +1,33 @@
+[
+    {
+        "remote":       "github",
+        "repository":   "mahajant99/vendor_xiaomi",
+        "target_path":  "vendor/xiaomi",
+        "branch":     "eleven"
+    },
+    {
+        "remote":       "github",
+        "repository":   "mahajant99/kernel_xiaomi_surya",
+        "target_path":  "kernel/xiaomi/surya",
+        "branch":     "eleven"
+    },
+    {
+        "remote":       "github",
+        "repository":   "LineageOS/android_packages_resources_devicesettings",
+        "target_path":  "packages/resources/devicesettings",
+        "branch":     "lineage-18.1"
+    },
+    {
+        "remote":       "github",
+        "repository":   "LineageOS/android_hardware_xiaomi",
+        "target_path":  "hardware/xiaomi",
+        "branch":     "lineage-18.1"
+    },
+    {
+        "repository":   "crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r433403",
+        "target_path":  "prebuilts/clang/host/linux-x86/clang-r433403",
+        "remote":       "gitlab",
+        "branch":       "11.0",
+        "clone-depth":  "1"
+    },
+]

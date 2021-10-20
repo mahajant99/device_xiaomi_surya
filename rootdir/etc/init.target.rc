@@ -38,7 +38,7 @@ on property:ro.boot.product.hardware.sku=surya
     enable vendor.nfc_hal_service
 
 on fs
-    mount_all --early /vendor/etc/fstab.qcom
+    mount_all --early
 
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
@@ -48,7 +48,7 @@ on fs
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
-    mount_all --late /vendor/etc/fstab.qcom
+    mount_all --late
 
 on post-fs-data
     mkdir /data/vendor/nnhal 0700 system system
@@ -64,19 +64,9 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 10
 
-    # Set doze mode permissions
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/doze_mode
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/doze_status
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/doze_mode
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/doze_status
-
-    # Set xiaomi touch permissions
-    chown system system /dev/xiaomi-touch
-    chmod 0660 /dev/xiaomi-touch
-
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.zram
+    swapon_all /vendor/etc/fstab.qcom
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
@@ -120,8 +110,15 @@ service vendor.remosaic_daemon /vendor/bin/remosaic_daemon
     group camera
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.nv_mac /vendor/bin/nv_mac
-    class main
-    user system
-    group system inet net_admin wifi net_raw
-    oneshot
+service mi_thermald /vendor/bin/mi_thermald
+    class core
+    user root
+    group system
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    override
+    class hal
+    user nfc
+    group nfc
+    writepid /dev/cpuset/system-background/tasks
+    disabled
