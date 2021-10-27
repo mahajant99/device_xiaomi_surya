@@ -572,4 +572,7 @@
 
     <!-- Flag indicating whether we should enable the adaptive sleep.-->
     <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Indicates whether device has a power button fingerprint sensor. -->
+    <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
 </resources>
