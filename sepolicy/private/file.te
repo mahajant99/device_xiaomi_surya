@@ -1,0 +1,4 @@
+type proc_nvt_feature, proc_type, fs_type;
+
+# Kcal
+type kcal_dev, sysfs_type, fs_type;
