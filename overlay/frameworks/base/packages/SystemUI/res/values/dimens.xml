@@ -28,7 +28,13 @@
     <dimen name="status_bar_padding_end">6dp</dimen>
     <dimen name="rounded_corner_content_padding">16dp</dimen>
 
-    <!-- Location of physical power button -->
-    <dimen name="physical_power_button_center_screen_location_y">950px</dimen>
-    <dimen name="physical_fingerprint_sensor_center_screen_location_y">950px</dimen>
+    <!-- Location on the screen of the center of the physical power button. -->
+    <dimen name="physical_power_button_center_screen_location_y">1030px</dimen>
+
+    <!-- Location on the screen of the center of the physical volume up/down buttons. -->
+    <dimen name="physical_volume_up_button_center_screen_location_y">500px</dimen>
+    <dimen name="physical_volume_down_button_center_screen_location_y">655px</dimen>
+
+    <!-- Location on the screen of the center of the fingerprint sensor. -->
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1030px</dimen>
 </resources>
