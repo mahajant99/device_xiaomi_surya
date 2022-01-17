@@ -86,7 +86,7 @@ public class RefreshRateTileService extends TileService {
         displayText = String.format(Locale.US, min == max ? "%d Hz" : "%d - %d Hz", min, max);
         tile.setContentDescription(displayText);
         tile.setSubtitle(displayText);
-        tile.setState(min == max ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+        tile.setState(min != max ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         tile.updateTile();
     }
 
