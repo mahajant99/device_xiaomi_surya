@@ -63,6 +63,7 @@ on post-fs-data
 on boot
     start rmt_storage
     start rfs_access
+    start mi_thermald
 
     # Set thermal mode to evaluation
     chmod 0664 /sys/class/thermal/thermal_message/sconfig
