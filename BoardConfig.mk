@@ -195,6 +195,8 @@ TARGET_SCREEN_DENSITY := 420
 VENDOR_SECURITY_PATCH := 2021-07-01
 
 # Sepolicy
+SELINUX_IGNORE_NEVERALLOWS := true
+
 TARGET_SEPOLICY_DIR := msmsteppe
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
