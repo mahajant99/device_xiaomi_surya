@@ -1,5 +1,6 @@
 type persist_lcd_prop, property_type;
 type xiaomiparts_app, domain;
+typeattribute xiaomiparts_app mlstrustedsubject;
 
 app_domain(xiaomiparts_app)
 
@@ -10,14 +11,15 @@ allow xiaomiparts_app {
     audioserver_service
     autofill_service
     gpu_service
-    media_session_service
     mediaserver_service
+    storagestats_service
     surfaceflinger_service
     tethering_service
 }:service_manager find;
 
 allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
 allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
+allow xiaomiparts_app sensorservice_service:service_manager { find };
 
 # kcal
 allow xiaomiparts_app kcal_dev:dir search;
@@ -28,6 +30,15 @@ set_prop(xiaomiparts_app, persist_lcd_prop)
 
 binder_call(xiaomiparts_app, gpuservice)
 
+allow xiaomiparts_app {
+  cgroup
+}:file rw_file_perms;
+
+allow xiaomiparts_app sysfs_thermal:file w_file_perms;
+allow xiaomiparts_app proc_nvt_feature:file rw_file_perms;
 # Allow xiaomi_settings to read and write to sysfs_vibrator
 allow xiaomiparts_app sysfs_vibrator:dir search;
 allow xiaomiparts_app sysfs_vibrator:file rw_file_perms;
+
+allow xiaomiparts_app system_prop:property_service { set };
+allow xiaomiparts_app default_prop:file { getattr read open map};
