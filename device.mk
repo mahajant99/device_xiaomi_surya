@@ -334,7 +334,6 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 
 PRODUCT_PACKAGES += \
     KarnaFrameworks \
-    NoCutoutOverlay \
     NotchBarKiller
 
 # Partitions
