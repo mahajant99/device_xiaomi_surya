@@ -91,11 +91,20 @@ on boot
     chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_min
     chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
 
+    # Access permissions for vibrator calibration
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/cali
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/cali_save
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/f0_save
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/osc_save
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/osc_cali
+
 on charger
     chown system system /sys/class/leds/white/brightness
     write /sys/class/leds/white/brightness 255
 
 on property:sys.boot_completed=1
+    start vibrator_calibration
+
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
 
@@ -135,6 +144,13 @@ service mi_thermald /vendor/bin/mi_thermald
     class core
     user root
     group system
+
+service vibrator_calibration /vendor/bin/vibrator_calibration
+     class late_start
+     user system
+     group system
+     disabled
+     oneshot
 
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     override
