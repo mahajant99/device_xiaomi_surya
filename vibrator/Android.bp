@@ -15,7 +15,7 @@ cc_library_shared {
         "liblog",
         "libqtivibratoreffect",
         "libbinder_ndk",
-        "android.hardware.vibrator-ndk_platform",
+        "android.hardware.vibrator-V1-ndk_platform",
     ],
     export_include_dirs: ["include"]
 }
@@ -38,7 +38,7 @@ cc_binary {
         "libutils",
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-ndk_platform",
+        "android.hardware.vibrator-V1-ndk_platform",
         "vendor.qti.hardware.vibrator.impl",
     ],
 }
