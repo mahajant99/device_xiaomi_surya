@@ -342,6 +342,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     libqti-perfd-client
 
+# Platform
+PRODUCT_BOARD_PLATFORM := sm6150
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr

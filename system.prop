@@ -17,12 +17,6 @@ ro.charger.enable_suspend=true
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
-# Havoc
-ro.havoc.device.name=POCO X3 / NFC
-ro.havoc.group.url=https://t.me/havocos_surya
-ro.havoc.maintainer=Tushar Mahajan
-ro.havoc.maintainer.username=mahajant99
-
 # LCD features
 persist.lcd.cabc_mode=0
 persist.lcd.hbm_mode=0

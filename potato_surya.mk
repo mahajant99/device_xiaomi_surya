@@ -21,15 +21,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Inherit some common Potato stuff.
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
-PRODUCT_NAME := havoc_surya
+PRODUCT_NAME := potato_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X3
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-HAVOC_BUILD_TYPE := Official
