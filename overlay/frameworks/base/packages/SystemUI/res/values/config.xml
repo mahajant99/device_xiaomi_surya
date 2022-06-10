@@ -27,6 +27,9 @@
     <!-- Show battery icon in the QS Panel instead of in the header -->
     <bool name="config_batteryInQSPanel">false</bool>
 
+    <!-- The CPU temperature sensor path, CPU0 -->
+    <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone45/temp</string>
+
     <!-- Whether global actions should show an informational message about changes in S -->
     <bool name="global_actions_show_change_info">true</bool>
 </resources>
