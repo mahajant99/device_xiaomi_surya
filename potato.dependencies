@@ -2,7 +2,7 @@
    {
       "remote":"github",
       "repository":"mahajant99/vendor_xiaomi",
-      "target_path":"vendor/xiaomi"
+      "target_path":"vendor/xiaomi",
       "branch":"twelve"
    },
    {
@@ -12,11 +12,5 @@
    {
       "repository":"hardware_xiaomi",
       "target_path":"hardware/xiaomi"
-   },
-   {
-      "remote":"lineage",
-      "repository":"android_packages_resources_devicesettings",
-      "target_path":"packages/resources/devicesettings",
-      "branch":"lineage-18.1"
    }
 ]
