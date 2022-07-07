@@ -95,7 +95,7 @@ void vendor_load_properties() {
             model = "M2007J20CG";
     }
 
-    fingerprint = "google/redfin/redfin:12/SQ3A.220605.009.A1/8643238:user/release-keys";
+    fingerprint = "google/redfin/redfin:12/SQ3A.220705.003.A1/8672226:user/release-keys";
     description = "surya_eea-user 11 RKQ1.200826.002 V12.5.2.0.RJGEUXM release-keys";
 
     set_ro_build_prop("fingerprint", fingerprint);
