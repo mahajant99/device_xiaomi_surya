@@ -1,1 +1,0 @@
-allow cameraserver nfc_service:service_manager { find };

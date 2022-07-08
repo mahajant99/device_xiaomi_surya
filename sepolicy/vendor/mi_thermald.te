@@ -6,8 +6,6 @@ type thermal_data_file, data_file_type, file_type;
 
 init_daemon_domain(mi_thermald)
 
-set_prop(mi_thermald, vendor_thermal_normal_prop)
-
 allow mi_thermald thermal_data_file:dir rw_dir_perms;
 allow mi_thermald thermal_data_file:file create_file_perms;
 

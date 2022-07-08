@@ -25,9 +25,6 @@ allow xiaomiparts_app sensorservice_service:service_manager { find };
 allow xiaomiparts_app kcal_dev:dir search;
 allow xiaomiparts_app kcal_dev:file rw_file_perms;
 
-get_prop(xiaomiparts_app, persist_lcd_prop)
-set_prop(xiaomiparts_app, persist_lcd_prop)
-
 binder_call(xiaomiparts_app, gpuservice)
 
 allow xiaomiparts_app {
@@ -39,6 +36,4 @@ allow xiaomiparts_app proc_nvt_feature:file rw_file_perms;
 # Allow xiaomi_settings to read and write to sysfs_vibrator
 allow xiaomiparts_app sysfs_vibrator:dir search;
 allow xiaomiparts_app sysfs_vibrator:file rw_file_perms;
-
 allow xiaomiparts_app system_prop:property_service { set };
-allow xiaomiparts_app default_prop:file { getattr read open map};
